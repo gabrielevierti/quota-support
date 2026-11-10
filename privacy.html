@@ -1,92 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quota – Flight Radar · Privacy Policy</title>
+<meta name="description" content="Quota collects no personal data: no account, no analytics, no tracking.">
+<meta name="theme-color" content="#060b16">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
 </head>
 <body>
-<main>
-  <header>
-    <h1>Privacy Policy</h1>
-    <p class="tagline">Quota – Flight Radar · last updated 10 November 2026 · <a href="#it">Italiano</a></p>
-    <nav><a href="index.html">Support</a></nav>
-  </header>
 
-  <section>
-    <p><strong>Quota collects no personal data.</strong> There is no account, no sign-in, no advertising, no advertising identifier, no analytics and no tracking SDK. The developer operates no server: the app talks directly to the public data services listed below.</p>
-    <p><strong>App Store privacy label.</strong> The label lists <em>Contact Info – Email Address</em>, used for app functionality and never for tracking. This only concerns the optional <em>Get your free key</em> request: the email you type is sent to FlyItalyADSB, which keeps it to send you your key. The developer never receives it.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Quota</a>
+    <nav aria-label="Sections">
+      <a href="index.html#features"><span lang="en">Features</span><span lang="it">Funzioni</span></a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="it">IT</button>
+    </div>
+  </div>
+</header>
 
-    <h2>What stays on your device</h2>
-    <ul>
-      <li><strong>Location:</strong> requested only when you tap a location button, with reduced accuracy by default. Used on the device to centre the map or list nearby airports. Never stored, never transmitted.</li>
-      <li><strong>Saved aircraft and airports, tracked flights, search and viewing history, tracking sessions, settings:</strong> stored only on your device. Deleting the app deletes them.</li>
-      <li><strong>Your FlyItalyADSB API key:</strong> stored in the iOS Keychain on this device only (not in iCloud backups), sent only to FlyItalyADSB with each request, removable at any time in Settings › Data source.</li>
-      <li><strong>Widgets and Live Activities:</strong> read a snapshot written by the app on the same device. They never connect to the network.</li>
-    </ul>
+<main class="doc">
+  <div class="wrap">
 
-    <h2>Third-party services the app contacts</h2>
-    <p>Each request contains only what is needed for the feature, never your identity, location or device identifiers. Like any web server, each service receives your IP address; their own privacy policies apply.</p>
-    <ul>
-      <li><strong>adsb.lol</strong>: live aircraft for the map area on screen and aircraft details (the request contains only coordinates, a radius or an aircraft identifier). This is the default source.</li>
-      <li><strong>FlyItalyADSB</strong> (flyitalyadsb.com): with Premium and your own key, live aircraft, aircraft details, observed flights and tracks. If you use <em>Get your free key</em>, the email address you type is sent directly to FlyItalyADSB so they can email you a one-time link; Quota never sees, stores or forwards it anywhere else.</li>
-      <li><strong>adsbdb.com</strong>: the usual route of an airline callsign (the request contains only the callsign).</li>
-      <li><strong>“Which aircraft is that?”</strong>: the camera is only shown on screen, never recorded or sent; your precise position is used on the device while that screen is open and not stored.</li>
-      <li><strong>CelesTrak (celestrak.org)</strong>: the Space Station orbit (the request contains nothing about you); passes, transits and reminders are computed on the device.</li>
-      <li><strong>Terrain Tiles on AWS Open Data (s3.amazonaws.com)</strong>: ground elevation for the terrain profile in the Flight tab; the request contains only the tile numbers of your route's area. Navaids, magnetic variation, aircraft profiles, checklists and the logbook stay on the device.</li>
-      <li><strong>OpenStreetMap (Overpass API)</strong>: the ground layout of an airport you open (the request contains only the area around that airport).</li>
-      <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): airport weather (the request contains only the airport code) and worldwide SIGMET areas (the request contains nothing specific).</li>
-      <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): optional satellite cloud and precipitation map tiles.</li>
-      <li><strong>Planespotters.net</strong>: a photo of the aircraft you open (the request contains only its registration or ICAO address). Photos are kept in memory only.</li>
-      <li><strong>Apple</strong>: maps (MapKit), geocoding for time zones, and purchases (StoreKit). Quota receives only Apple’s signed confirmation that Premium is unlocked; it never sees payment details.</li>
-    </ul>
-    <p>Airport, runway and frequency data (OurAirports, public domain) is bundled with the app and never requested.</p>
+    <!-- English -->
+    <div lang="en">
+      <div class="eyebrow">Quota – Flight Radar</div>
+      <h1>Privacy Policy</h1>
+      <div class="meta">Last updated 10 November 2026</div>
 
-    <h2>Diagnostics</h2>
-    <p>The app writes minimal technical logs to the device’s system log (OSLog), with no personal data. Nothing is sent to the developer.</p>
+      <div class="highlights">
+        <div class="card"><b>No personal data</b><span style="color:var(--muted)">No account, no sign-in, no analytics, no tracking SDK.</span></div>
+        <div class="card"><b>No server of ours</b><span style="color:var(--muted)">The app talks directly to the public data services below.</span></div>
+        <div class="card"><b>On your device</b><span style="color:var(--muted)">Saved items, history, logbook and settings never leave it.</span></div>
+      </div>
 
-    <h2>Children</h2>
-    <p>Quota is not directed at children. The developer collects no data from anyone.</p>
+      <p><strong>Quota collects no personal data.</strong> There is no account, no sign-in, no advertising, no advertising identifier, no analytics and no tracking SDK. The developer operates no server: the app talks directly to the public data services listed below.</p>
+      <p><strong>App Store privacy label.</strong> The label lists <em>Contact Info – Email Address</em>, used for app functionality and never for tracking. This only concerns the optional <em>Get your free key</em> request: the email you type is sent to FlyItalyADSB, which keeps it to send you your key. The developer never receives it.</p>
 
-    <h2>Changes and contact</h2>
-    <p>Changes to this policy are published on this page with a new date. Questions: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a>.</p>
-  </section>
+      <h2>What stays on your device</h2>
+      <ul>
+        <li><strong>Location:</strong> requested only when you use a location feature, with approximate accuracy by default. Used on the device to centre the map, list nearby airports or compute satellite passes. Never stored, never transmitted.</li>
+        <li><strong>Flight mode:</strong> uses precise GPS and the motion sensors while it is open, on the device only. The logbook it fills (times and airports of take-off and landing) is stored only on your device and leaves it only if you export it yourself.</li>
+        <li><strong>Saved aircraft and airports, tracked flights, search and viewing history, tracking sessions, flight plans, settings:</strong> stored only on your device. Deleting the app deletes them.</li>
+        <li><strong>Your FlyItalyADSB API key:</strong> stored in the iOS Keychain on this device only (not in iCloud backups), sent only to FlyItalyADSB with each request, removable at any time in Settings › Data source.</li>
+        <li><strong>Widgets and Live Activities:</strong> read a snapshot written by the app on the same device. They never connect to the network.</li>
+      </ul>
 
-  <section id="it">
-    <h1>Informativa sulla privacy</h1>
-    <p><strong>Quota non raccoglie dati personali.</strong> Nessun account, nessun accesso, nessuna pubblicità, nessun identificatore pubblicitario, nessuna analisi d’uso, nessun SDK di tracciamento. Lo sviluppatore non gestisce alcun server: l’app parla direttamente con i servizi pubblici elencati sotto.</p>
-    <p><strong>Etichetta privacy dell’App Store.</strong> L’etichetta indica <em>Informazioni di contatto – Indirizzo email</em>, usato per il funzionamento dell’app e mai per il tracciamento. Riguarda solo la richiesta facoltativa <em>Ottieni la tua chiave gratuita</em>: l’email che digiti viene inviata a FlyItalyADSB, che la conserva per mandarti la chiave. Lo sviluppatore non la riceve mai.</p>
-    <h2>Cosa resta sul tuo dispositivo</h2>
-    <ul>
-      <li><strong>Posizione:</strong> richiesta solo quando tocchi un pulsante di localizzazione, con precisione ridotta di default. Usata sul dispositivo per centrare la mappa o elencare gli aeroporti vicini. Mai salvata, mai trasmessa.</li>
-      <li><strong>Aerei e aeroporti salvati, voli seguiti, cronologia di ricerca e visualizzazione, sessioni di tracking, impostazioni:</strong> solo sul tuo dispositivo. Eliminando l’app si eliminano.</li>
-      <li><strong>La tua chiave API FlyItalyADSB:</strong> nel Portachiavi iOS solo su questo dispositivo (non nei backup iCloud), inviata solo a FlyItalyADSB, rimovibile in Impostazioni › Fonte dati.</li>
-      <li><strong>Widget e Live Activity:</strong> leggono una fotografia scritta dall’app sullo stesso dispositivo. Non si collegano mai alla rete.</li>
-    </ul>
-    <h2>Servizi di terzi contattati dall’app</h2>
-    <p>Ogni richiesta contiene solo ciò che serve alla funzione, mai la tua identità, posizione o identificatori del dispositivo. Come ogni server web, ciascun servizio riceve il tuo indirizzo IP; valgono le loro informative.</p>
-    <ul>
-      <li><strong>adsb.lol</strong>: aerei in diretta per l’area di mappa visibile e dettagli (la richiesta contiene solo coordinate, un raggio o un identificativo dell’aereo). È la fonte predefinita.</li>
-      <li><strong>FlyItalyADSB</strong>: con Premium e la tua chiave, aerei in diretta, dettagli, voli osservati e tracce. Se usi <em>Ottieni la tua chiave gratuita</em>, l’email che digiti viene inviata direttamente a FlyItalyADSB per ricevere il link; Quota non la vede, non la salva e non la inoltra altrove.</li>
-      <li><strong>adsbdb.com</strong>: rotta abituale di un nominativo di linea (solo il nominativo).</li>
-      <li><strong>“Che aereo è quello?”</strong>: la fotocamera è solo mostrata sullo schermo, mai registrata né inviata; la tua posizione precisa è usata sul dispositivo mentre la schermata è aperta e non viene salvata.</li>
-      <li><strong>CelesTrak (celestrak.org)</strong>: l'orbita della stazione spaziale (la richiesta non contiene niente su di te); passaggi, transiti e promemoria sono calcolati sul dispositivo.</li>
-      <li><strong>Terrain Tiles su AWS Open Data (s3.amazonaws.com)</strong>: l'altezza del terreno per il profilo nella scheda Volo; la richiesta contiene solo i numeri delle tessere dell'area della rotta. Radioassistenze, declinazione magnetica, profili degli aerei, checklist e libretto di volo restano sul dispositivo.</li>
-      <li><strong>OpenStreetMap (Overpass API)</strong>: la mappa a terra dell'aeroporto che apri (solo l'area intorno a quell'aeroporto).</li>
-      <li><strong>NOAA Aviation Weather Center</strong>: meteo aeroportuale (solo il codice dell’aeroporto) e aree SIGMET mondiali.</li>
-      <li><strong>NASA GIBS</strong>: tile satellitari opzionali di nuvole e precipitazioni.</li>
-      <li><strong>Planespotters.net</strong>: foto dell’aereo che apri (solo marche o indirizzo ICAO). Foto tenute solo in memoria.</li>
-      <li><strong>Apple</strong>: mappe, geocodifica per i fusi orari e acquisti. Quota riceve solo la conferma firmata da Apple che Premium è sbloccato; non vede mai i dati di pagamento.</li>
-    </ul>
-    <p>Dati di aeroporti, piste e frequenze (OurAirports, pubblico dominio) sono inclusi nell’app e mai richiesti.</p>
-    <h2>Diagnostica</h2>
-    <p>L’app scrive log tecnici minimi nel registro di sistema del dispositivo, senza dati personali. Nulla viene inviato allo sviluppatore.</p>
-    <h2>Modifiche e contatti</h2>
-    <p>Le modifiche sono pubblicate in questa pagina con una nuova data. Domande: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a>.</p>
-  </section>
+      <h2>Third-party services the app contacts</h2>
+      <p>Each request contains only what is needed for the feature, never your identity, location or device identifiers. Like any web server, each service receives your IP address; their own privacy policies apply.</p>
+      <ul>
+        <li><strong>adsb.lol</strong>: live aircraft for the map area on screen and aircraft details (the request contains only coordinates, a radius or an aircraft identifier). This is the default source.</li>
+        <li><strong>FlyItalyADSB</strong> (flyitalyadsb.com): with your own key, live aircraft, aircraft details, observed flights and tracks. If you use <em>Get your free key</em>, the email address you type is sent directly to FlyItalyADSB so they can email you a one-time link; Quota never sees, stores or forwards it anywhere else.</li>
+        <li><strong>adsbdb.com</strong>: the usual route of an airline callsign (the request contains only the callsign).</li>
+        <li><strong>“Which aircraft is that?”</strong>: the camera is only shown on screen, never recorded or sent; your precise position is used on the device while that screen is open and not stored.</li>
+        <li><strong>CelesTrak</strong> (celestrak.org): the orbits of the space stations, Hubble and recently launched satellites such as Starlink (the requests contain nothing about you); passes, transits and reminders are computed and scheduled on the device.</li>
+        <li><strong>Terrain Tiles on AWS Open Data</strong> (s3.amazonaws.com): ground elevation for the terrain profile in the Flight tab; the request contains only the tile numbers of your route's area.</li>
+        <li><strong>NOAA GFS forecast</strong> (nomads.ncep.noaa.gov): winds and temperatures aloft for the Flight tab; the request contains only a box of about one degree around your route.</li>
+        <li><strong>OpenStreetMap</strong> (Overpass API): the ground layout of an airport you open (the request contains only the area around that airport).</li>
+        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): airport weather (the request contains only the airport code) and worldwide SIGMET areas (the request contains nothing specific).</li>
+        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): optional satellite cloud and precipitation map tiles.</li>
+        <li><strong>Planespotters.net</strong>: a photo of the aircraft you open (the request contains only its registration or ICAO address). Photos are kept in memory only.</li>
+        <li><strong>Apple</strong>: maps (MapKit), geocoding for time zones and, when offered, purchases (StoreKit). Quota receives only Apple’s signed confirmation of a purchase; it never sees payment details.</li>
+      </ul>
+      <p>Airport, runway, frequency and navaid data (OurAirports, public domain) and the magnetic model (NOAA WMM2025) are bundled with the app and never requested.</p>
 
-  <footer><p>© 2026 Gabriele Vierti</p></footer>
+      <h2>Diagnostics</h2>
+      <p>The app writes minimal technical logs to the device’s system log (OSLog), with no personal data. Nothing is sent to the developer.</p>
+
+      <h2>Children</h2>
+      <p>Quota is not directed at children. The developer collects no data from anyone.</p>
+
+      <h2>Changes and contact</h2>
+      <p>Changes to this policy are published on this page with a new date. Questions: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a>.</p>
+    </div>
+
+    <!-- Italiano -->
+    <div lang="it">
+      <div class="eyebrow">Quota – Flight Radar</div>
+      <h1>Informativa sulla privacy</h1>
+      <div class="meta">Ultimo aggiornamento: 10 novembre 2026</div>
+
+      <div class="highlights">
+        <div class="card"><b>Nessun dato personale</b><span style="color:var(--muted)">Nessun account, nessun accesso, nessuna analisi d'uso, nessun tracciamento.</span></div>
+        <div class="card"><b>Nessun server nostro</b><span style="color:var(--muted)">L'app parla direttamente con i servizi pubblici elencati sotto.</span></div>
+        <div class="card"><b>Sul tuo dispositivo</b><span style="color:var(--muted)">Elementi salvati, cronologia, libretto e impostazioni non lo lasciano mai.</span></div>
+      </div>
+
+      <p><strong>Quota non raccoglie dati personali.</strong> Nessun account, nessun accesso, nessuna pubblicità, nessun identificatore pubblicitario, nessuna analisi d’uso, nessun SDK di tracciamento. Lo sviluppatore non gestisce alcun server: l’app parla direttamente con i servizi pubblici elencati sotto.</p>
+      <p><strong>Etichetta privacy dell’App Store.</strong> L’etichetta indica <em>Informazioni di contatto – Indirizzo email</em>, usato per il funzionamento dell’app e mai per il tracciamento. Riguarda solo la richiesta facoltativa <em>Ottieni la tua chiave gratuita</em>: l’email che digiti viene inviata a FlyItalyADSB, che la conserva per mandarti la chiave. Lo sviluppatore non la riceve mai.</p>
+
+      <h2>Cosa resta sul tuo dispositivo</h2>
+      <ul>
+        <li><strong>Posizione:</strong> richiesta solo quando usi una funzione di localizzazione, con precisione approssimativa di default. Usata sul dispositivo per centrare la mappa, elencare gli aeroporti vicini o calcolare i passaggi dei satelliti. Mai salvata, mai trasmessa.</li>
+        <li><strong>Modalità volo:</strong> usa il GPS preciso e i sensori di movimento mentre è aperta, solo sul dispositivo. Il libretto che compila (orari e aeroporti di decollo e atterraggio) resta solo sul tuo dispositivo e lo lascia solo se lo esporti tu.</li>
+        <li><strong>Aerei e aeroporti salvati, voli seguiti, cronologia di ricerca e visualizzazione, sessioni di tracciamento, piani di volo, impostazioni:</strong> solo sul tuo dispositivo. Eliminando l’app si eliminano.</li>
+        <li><strong>La tua chiave API FlyItalyADSB:</strong> nel Portachiavi iOS solo su questo dispositivo (non nei backup iCloud), inviata solo a FlyItalyADSB, rimovibile in Impostazioni › Fonte dati.</li>
+        <li><strong>Widget e Live Activity:</strong> leggono una fotografia scritta dall’app sullo stesso dispositivo. Non si collegano mai alla rete.</li>
+      </ul>
+
+      <h2>Servizi di terzi contattati dall’app</h2>
+      <p>Ogni richiesta contiene solo ciò che serve alla funzione, mai la tua identità, posizione o identificatori del dispositivo. Come ogni server web, ciascun servizio riceve il tuo indirizzo IP; valgono le loro informative.</p>
+      <ul>
+        <li><strong>adsb.lol</strong>: aerei in diretta per l’area di mappa visibile e dettagli (la richiesta contiene solo coordinate, un raggio o un identificativo dell’aereo). È la fonte predefinita.</li>
+        <li><strong>FlyItalyADSB</strong> (flyitalyadsb.com): con la tua chiave, aerei in diretta, dettagli, voli osservati e tracce. Se usi <em>Ottieni la tua chiave gratuita</em>, l’email che digiti viene inviata direttamente a FlyItalyADSB per ricevere il link; Quota non la vede, non la salva e non la inoltra altrove.</li>
+        <li><strong>adsbdb.com</strong>: rotta abituale di un nominativo di linea (solo il nominativo).</li>
+        <li><strong>“Che aereo è quello?”</strong>: la fotocamera è solo mostrata sullo schermo, mai registrata né inviata; la tua posizione precisa è usata sul dispositivo mentre la schermata è aperta e non viene salvata.</li>
+        <li><strong>CelesTrak</strong> (celestrak.org): le orbite delle stazioni spaziali, di Hubble e dei satelliti lanciati di recente come gli Starlink (le richieste non contengono niente su di te); passaggi, transiti e promemoria sono calcolati e programmati sul dispositivo.</li>
+        <li><strong>Terrain Tiles su AWS Open Data</strong> (s3.amazonaws.com): l’altezza del terreno per il profilo nella scheda Volo; la richiesta contiene solo i numeri delle tessere dell’area della rotta.</li>
+        <li><strong>Previsioni NOAA GFS</strong> (nomads.ncep.noaa.gov): venti e temperature in quota per la scheda Volo; la richiesta contiene solo un riquadro di circa un grado attorno alla rotta.</li>
+        <li><strong>OpenStreetMap</strong> (Overpass API): la mappa a terra dell’aeroporto che apri (solo l’area intorno a quell’aeroporto).</li>
+        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): meteo aeroportuale (solo il codice dell’aeroporto) e aree SIGMET mondiali.</li>
+        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): tessere satellitari facoltative di nuvole e precipitazioni.</li>
+        <li><strong>Planespotters.net</strong>: la foto dell’aereo che apri (solo marche o indirizzo ICAO). Le foto restano solo in memoria.</li>
+        <li><strong>Apple</strong>: mappe (MapKit), geocodifica per i fusi orari e, quando offerti, acquisti (StoreKit). Quota riceve solo la conferma firmata di un acquisto; non vede mai i dati di pagamento.</li>
+      </ul>
+      <p>Dati di aeroporti, piste, frequenze e radioassistenze (OurAirports, pubblico dominio) e il modello magnetico (NOAA WMM2025) sono inclusi nell’app e mai richiesti.</p>
+
+      <h2>Diagnostica</h2>
+      <p>L’app scrive log tecnici minimi nel registro di sistema del dispositivo, senza dati personali. Nulla viene inviato allo sviluppatore.</p>
+
+      <h2>Minori</h2>
+      <p>Quota non è rivolta ai minori. Lo sviluppatore non raccoglie dati da nessuno.</p>
+
+      <h2>Modifiche e contatti</h2>
+      <p>Le modifiche sono pubblicate in questa pagina con una nuova data. Domande: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a>.</p>
+    </div>
+
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span class="grow">© <span data-year>2026</span> Gabriele Vierti · Quota – Flight Radar</span>
+    <a href="index.html"><span lang="en">Home</span><span lang="it">Home</span></a>
+    <a href="index.html#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
+    <a href="https://github.com/gabrielevierti/quota-support">GitHub</a>
+  </div>
+</footer>
+
 </body>
 </html>

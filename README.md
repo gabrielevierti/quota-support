@@ -1,9 +1,15 @@
-# Quota – Flight Radar · support site
+# Quota – Flight Radar · website
 
-Static pages for the App Store support and privacy URLs. Enable GitHub Pages
-(Settings › Pages › Deploy from branch `main`, folder `/ (root)`), then:
+Support and privacy pages for the App Store, served by GitHub Pages
+(Settings › Pages › Deploy from branch `main`, folder `/ (root)`).
 
-- Support: https://gabrielevierti.github.io/quota-support/
-- Privacy: https://gabrielevierti.github.io/quota-support/privacy.html
+- Support URL: https://gabrielevierti.github.io/quota-support/
+- Privacy policy URL: https://gabrielevierti.github.io/quota-support/privacy.html
 
-Replace `SUPPORT_EMAIL` in `index.html` and `privacy.html` with the support address.
+English and Italian in the same pages: the language follows the browser and can
+be switched with EN / IT in the top bar (or by opening a page with `#it`).
+
+When the app is live, paste its App Store link into `APP_STORE_URL` at the top of
+`app.js`: the "Coming soon on the App Store" button becomes a download button.
+
+Screenshots are in `shots/` (640 px wide JPEG).

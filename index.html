@@ -1,66 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quota – Flight Radar · Support</title>
+<title>Quota – Flight Radar</title>
+<meta name="description" content="Quota – Flight Radar: live aircraft worldwide, airports with no-fly zones, a pilot's flight plan page and satellites overhead. No ads, no account, no tracking.">
+<meta name="theme-color" content="#060b16">
+<meta property="og:title" content="Quota – Flight Radar">
+<meta property="og:description" content="Real aircraft, nothing invented. Live traffic, airports, pilot tools and satellites. No ads, no account, no tracking.">
+<meta property="og:image" content="icon.png">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
 </head>
 <body>
-<main>
-  <header>
-    <img src="icon.png" alt="" width="96" height="96">
-    <h1>Quota – Flight Radar</h1>
-    <p class="tagline">Real aircraft, your own key. A flight radar that never invents a position.</p>
-    <nav><a href="#support">Support</a> · <a href="privacy.html">Privacy</a> · <a href="#it">Italiano</a></nav>
-  </header>
 
-  <section id="support">
-    <h2>Support</h2>
-    <p>Quota is made by one independent developer. For questions, bugs or ideas:</p>
-    <ul>
-      <li>Email: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a></li>
-      <li>Open an issue: <a href="https://github.com/gabrielevierti/quota-support/issues">github.com/gabrielevierti/quota-support/issues</a></li>
-    </ul>
-    <p>Please include your iOS version and, for data questions, the callsign or airport involved. Replies usually within a few days.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="icon.png" alt="">Quota</a>
+    <nav aria-label="Sections">
+      <a href="#features"><span lang="en">Features</span><span lang="it">Funzioni</span></a>
+      <a href="#pilots"><span lang="en">For pilots</span><span lang="it">Per piloti</span></a>
+      <a href="#faq">FAQ</a>
+      <a href="#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="it">IT</button>
+    </div>
+  </div>
+</header>
 
-    <h3>Frequently asked</h3>
-    <dl>
-      <dt>Do I need an account or a key?</dt>
-      <dd>No. Aircraft appear right away, worldwide, from adsb.lol. With Premium you can add your own free FlyItalyADSB key (Settings › Data source; they email you a link, you paste the key) for a 6-second refresh, today's tracks, observed flights and aircraft profiles.</dd>
-      <dt>Where does the data come from?</dt>
-      <dd>Live positions from <a href="https://adsb.lol">adsb.lol</a> (community network, open data, ODbL) and, with your Premium key, from <a href="https://flyitalyadsb.com">FlyItalyADSB</a> (CC BY-SA 4.0). Usual routes from adsbdb.com, airport weather and SIGMETs from the NOAA Aviation Weather Center, runways and frequencies from OurAirports, photos from Planespotters.net, satellite imagery from NASA GIBS.</dd>
-      <dt>Why no schedules, gates or delays?</dt>
-      <dd>ADS-B does not carry them, and Quota does not pretend otherwise. Arrival times shown are Quota’s own estimates, always labelled as such.</dd>
-      <dt>What does Premium include, and why?</dt>
-      <dd>Extra tools for enthusiasts (your own FlyItalyADSB key, 3D terrain, filters, exports, themes…) and, first of all, a way to support the developer. One-time purchase, no subscription. Everything essential stays free. Restore it any time from the Premium screen or Settings.</dd>
-      <dt>Coverage</dt>
-      <dd>Depends on volunteer receivers: dense over Italy and much of Europe, thinner elsewhere. The free plan covers a 500 km radius around the map centre.</dd>
-    </dl>
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="radar" aria-hidden="true">
+      <i class="blip" style="left:58%;top:30%;animation-delay:.6s"></i>
+      <i class="blip" style="left:38%;top:44%;animation-delay:2.2s"></i>
+      <i class="blip" style="left:66%;top:58%;animation-delay:3.4s"></i>
+      <i class="blip" style="left:46%;top:68%;animation-delay:5.1s"></i>
+    </div>
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Quota – Flight Radar · iPhone · iPad · Mac</div>
+        <h1 lang="en">Real aircraft.<br><em>Nothing invented.</em></h1>
+        <h1 lang="it">Aerei veri.<br><em>Niente di inventato.</em></h1>
+        <p class="lead" lang="en">Live traffic worldwide, airports with their no-fly zones, a flight plan page like an onboard computer and the satellites passing overhead. Every value says whether it is live, cached or estimated.</p>
+        <p class="lead" lang="it">Traffico in diretta in tutto il mondo, aeroporti con le zone no-fly, una pagina piano di volo come un computer di bordo e i satelliti che ti passano sopra. Ogni valore dice se è in diretta, in cache o stimato.</p>
+        <div class="ctas">
+          <a class="btn primary" data-appstore href="#support" aria-disabled="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            <span class="stack">
+              <span class="soon"><small lang="en">Coming soon</small><small lang="it">In arrivo</small><span lang="en">on the App Store</span><span lang="it">sull'App Store</span></span>
+              <span class="now"><small lang="en">Download on the</small><small lang="it">Scarica</small>App Store</span>
+            </span>
+          </a>
+          <a class="btn" href="#support"><span lang="en">Get help</span><span lang="it">Assistenza</span></a>
+        </div>
+        <div class="pills">
+          <span class="pill"><b>✓</b> <span lang="en">No ads</span><span lang="it">Niente pubblicità</span></span>
+          <span class="pill"><b>✓</b> <span lang="en">No account</span><span lang="it">Nessun account</span></span>
+          <span class="pill"><b>✓</b> <span lang="en">No tracking</span><span lang="it">Nessun tracciamento</span></span>
+          <span class="pill"><b>✓</b> <span lang="en">Free</span><span lang="it">Gratis</span></span>
+        </div>
+      </div>
+      <div class="phones" aria-hidden="true">
+        <div class="phone a"><img src="shots/01-radar-milano.jpg" alt=""></div>
+        <div class="phone b"><img src="shots/02-dettaglio-aereo.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section id="features" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" lang="en">What it does</div><div class="eyebrow" lang="it">Cosa fa</div>
+        <h2 lang="en">The sky above you, as it really is.</h2>
+        <h2 lang="it">Il cielo sopra di te, com'è davvero.</h2>
+        <p lang="en">Every position comes from the aircraft itself, received by community networks of ADS-B receivers. Between two updates Quota glides the aircraft along its track, and never draws a landing aircraft past the runway.</p>
+        <p lang="it">Ogni posizione arriva dall'aereo stesso, ricevuta da reti comunitarie di ricevitori ADS-B. Tra un aggiornamento e l'altro Quota fa scorrere l'aereo lungo la sua rotta, e non disegna mai un aereo in atterraggio oltre la pista.</p>
+      </div>
+
+      <div class="feature">
+        <div>
+          <div class="tag">Radar</div>
+          <h3 lang="en">Live aircraft, worldwide.</h3><h3 lang="it">Aerei in diretta, in tutto il mondo.</h3>
+          <ul lang="en">
+            <li>No account and no key: aircraft appear the moment you open the app.</li>
+            <li>Tap one for its instruments — heading, altitude tape, vertical speed, ground speed — its departure and usual route.</li>
+            <li>Larger markers higher up, helicopters with turning rotors, emergencies in red.</li>
+            <li>Layers: SIGMET weather, estimated airport and drone zones, space stations and satellites.</li>
+          </ul>
+          <ul lang="it">
+            <li>Nessun account e nessuna chiave: gli aerei compaiono appena apri l'app.</li>
+            <li>Toccane uno per i suoi strumenti — prua, nastro della quota, variometro, velocità al suolo — la partenza e la rotta abituale.</li>
+            <li>Simboli più grandi in quota, elicotteri con le pale che girano, emergenze in rosso.</li>
+            <li>Livelli: meteo SIGMET, zone aeroportuali e droni stimate, stazioni spaziali e satelliti.</li>
+          </ul>
+        </div>
+        <div class="shot"><div class="phone"><img src="shots/02-dettaglio-aereo.jpg" alt="Aircraft details with flight instruments" loading="lazy"></div></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <div class="tag" lang="en">Airports</div><div class="tag" lang="it">Aeroporti</div>
+          <h3 lang="en">Runways, zones and weather.</h3><h3 lang="it">Piste, zone e meteo.</h3>
+          <ul lang="en">
+            <li>Runways, terminals, aprons and car parks, with estimated drone no-fly and height-limited zones.</li>
+            <li>Arrivals and departures happening now, from live traffic.</li>
+            <li>METAR and TAF decoded, runway wind, frequencies, local time.</li>
+            <li>Directions with Apple Maps, Google Maps or Waze.</li>
+          </ul>
+          <ul lang="it">
+            <li>Piste, terminal, piazzali e parcheggi, con le zone droni vietate o con limite di quota stimate.</li>
+            <li>Arrivi e partenze in corso, dal traffico in diretta.</li>
+            <li>METAR e TAF decodificati, vento in pista, frequenze, ora locale.</li>
+            <li>Indicazioni con Apple Mappe, Google Maps o Waze.</li>
+          </ul>
+        </div>
+        <div class="shot"><div class="phone"><img src="shots/04-zone-malpensa.jpg" alt="Milan Malpensa with estimated drone zones" loading="lazy"></div></div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <div class="tag" lang="en">Follow a flight</div><div class="tag" lang="it">Segui un volo</div>
+          <h3 lang="en">On your Lock Screen and Home Screen.</h3><h3 lang="it">Sulla schermata di blocco e nella Home.</h3>
+          <ul lang="en">
+            <li>Follow puts the aircraft in the Dynamic Island.</li>
+            <li>Saved flights appear in widgets and as a Live Activity, with progress and an honest arrival window.</li>
+            <li>Share a card of the flight with its map and data.</li>
+          </ul>
+          <ul lang="it">
+            <li>Segui mette l'aereo nella Dynamic Island.</li>
+            <li>I voli salvati compaiono nei widget e come Live Activity, con avanzamento e una finestra di arrivo onesta.</li>
+            <li>Condividi una card del volo con mappa e dati.</li>
+          </ul>
+        </div>
+        <div class="shot"><div class="phone"><img src="shots/03-widget-home.jpg" alt="Quota widgets on the Home Screen" loading="lazy"></div></div>
+      </div>
+
+      <div class="grid" style="margin-top:40px">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M4 12a8 8 0 0 1 16 0M2 12a10 10 0 0 1 20 0"/><path d="m16.5 5.5 3-2"/></svg></div>
+          <h4 lang="en">Satellites overhead</h4><h4 lang="it">Satelliti sopra di te</h4>
+          <p lang="en">Passes of the ISS, the Tiangong station, Hubble and the latest Starlink trains, with a reminder five minutes before each visible pass.</p>
+          <p lang="it">Passaggi della ISS, della stazione Tiangong, di Hubble e degli ultimi treni Starlink, con un promemoria cinque minuti prima di ogni passaggio visibile.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></div>
+          <h4 lang="en">"What plane is that?"</h4><h4 lang="it">"Che aereo è quello?"</h4>
+          <p lang="en">Point the camera at the sky and Quota names the aircraft, the Moon and the satellites in view. The camera image never leaves the screen.</p>
+          <p lang="it">Punta la fotocamera al cielo e Quota ti dice quali aerei, la Luna e i satelliti stai guardando. L'immagine non lascia mai lo schermo.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 4h14v16l-7-4-7 4z"/></svg></div>
+          <h4 lang="en">Saved, on your device</h4><h4 lang="it">Salvati, sul tuo dispositivo</h4>
+          <p lang="en">Aircraft and airports you save stay on your iPhone or iPad. No cloud account, nothing to sign up for.</p>
+          <p lang="it">Aerei e aeroporti salvati restano sul tuo iPhone o iPad. Nessun account cloud, niente da registrare.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="it">
-    <h2>Supporto (Italiano)</h2>
-    <p>Quota è fatta da uno sviluppatore indipendente. Per domande, problemi o idee:</p>
-    <ul>
-      <li>Email: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a></li>
-      <li>Apri una segnalazione: <a href="https://github.com/gabrielevierti/quota-support/issues">github.com/gabrielevierti/quota-support/issues</a></li>
-    </ul>
-    <dl>
-      <dt>Serve un account o una chiave?</dt>
-      <dd>No. Gli aerei compaiono subito, in tutto il mondo, da adsb.lol. Con Premium puoi aggiungere la tua chiave FlyItalyADSB gratuita (Impostazioni › Fonte dati; ti mandano un link via email, incolli la chiave) per aggiornamento ogni 6 secondi, tracce di oggi, voli osservati e profili.</dd>
-      <dt>Da dove vengono i dati?</dt>
-      <dd>Posizioni da <a href="https://adsb.lol">adsb.lol</a> (rete comunitaria, dati aperti, ODbL) e, con la chiave Premium, da <a href="https://flyitalyadsb.com">FlyItalyADSB</a> (CC BY-SA 4.0). Rotte abituali da adsbdb.com, meteo e SIGMET dal NOAA Aviation Weather Center, piste e frequenze da OurAirports, foto da Planespotters.net, immagini satellitari da NASA GIBS.</dd>
-      <dt>Perché niente orari, gate o ritardi?</dt>
-      <dd>L’ADS-B non li trasmette e Quota non fa finta. Gli orari di arrivo mostrati sono stime di Quota, sempre etichettate come tali.</dd>
-      <dt>Cosa include Premium, e perché?</dt>
-      <dd>Strumenti extra per appassionati (la tua chiave FlyItalyADSB, terreno 3D, filtri, esportazioni, temi…) e, prima di tutto, un modo per sostenere lo sviluppatore. Acquisto una tantum, nessun abbonamento. Tutto l’essenziale resta gratis. Ripristinalo quando vuoi dalla schermata Premium o dalle Impostazioni.</dd>
-    </dl>
+  <!-- Pilots -->
+  <section id="pilots">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" lang="en">For pilots</div><div class="eyebrow" lang="it">Per piloti</div>
+        <h2 lang="en">A flight plan page, like an onboard computer.</h2>
+        <h2 lang="it">Una pagina piano di volo, come un computer di bordo.</h2>
+        <p lang="en">Plan on the ground, glance at it in flight. Airports, VOR, NDB and coordinates with autocomplete, a nav log with winds aloft, and a flight mode for the cockpit.</p>
+        <p lang="it">Pianifica a terra, consultalo in volo. Aeroporti, VOR, NDB e coordinate con autocompletamento, un log di navigazione con i venti in quota e una modalità volo per l'abitacolo.</p>
+      </div>
+
+      <div class="feature">
+        <div>
+          <div class="tag">FPL · NAV LOG</div>
+          <h3 lang="en">Plan the route.</h3><h3 lang="it">Pianifica la rotta.</h3>
+          <ul lang="en">
+            <li>Magnetic courses (WMM2025), wind correction, ground speed, times and fuel, leg by leg.</li>
+            <li>Winds and temperatures aloft from the NOAA GFS forecast, at your cruise altitude.</li>
+            <li>Terrain profile, navaids along the route, METAR, runway wind, density altitude and daylight at both ends.</li>
+            <li>Flight computer, weight and balance, checklists and a logbook that fills itself.</li>
+          </ul>
+          <ul lang="it">
+            <li>Rotte magnetiche (WMM2025), correzione vento, velocità al suolo, tempi e carburante, tratta per tratta.</li>
+            <li>Venti e temperature in quota dalle previsioni NOAA GFS, alla tua quota di crociera.</li>
+            <li>Profilo del terreno, radioassistenze lungo la rotta, METAR, vento in pista, quota densità e luce alle due estremità.</li>
+            <li>Computer di volo, massa e centraggio, checklist e un libretto di volo che si compila da solo.</li>
+          </ul>
+        </div>
+        <div class="shot"><div class="phone"><img src="shots/05-piano-di-volo.jpg" alt="Flight plan page" loading="lazy"></div></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <div class="tag" lang="en">Flight mode</div><div class="tag" lang="it">Modalità volo</div>
+          <h3 lang="en">The map first, the numbers beside it.</h3><h3 lang="it">Prima la mappa, accanto i numeri.</h3>
+          <ul lang="en">
+            <li>iPhone and iPad, portrait or landscape on a mount.</li>
+            <li>Round instruments from the phone's GPS: ground speed, an HSI with course and deviation, GPS altitude and vertical speed.</li>
+            <li>Direct-To, layers with zones and SIGMETs, and nearby traffic you can tap for callsign, clock position and height difference.</li>
+          </ul>
+          <ul lang="it">
+            <li>iPhone e iPad, in verticale o in orizzontale su un supporto.</li>
+            <li>Strumenti tondi dal GPS del telefono: velocità al suolo, un HSI con rotta e deviazione, quota GPS e variometro.</li>
+            <li>Direct-To, livelli con zone e SIGMET, e il traffico vicino da toccare per nominativo, posizione a ore e differenza di quota.</li>
+          </ul>
+        </div>
+        <div class="shot"><div class="phone"><img src="shots/06-modalita-volo.jpg" alt="Flight mode with moving map" loading="lazy"></div></div>
+      </div>
+
+      <div class="mfd" aria-hidden="true">
+        <div><span>GS</span><b>112 KT</b></div>
+        <div><span>TRK</span><b>292°</b></div>
+        <div><span>DTK</span><b class="mag">294°</b></div>
+        <div><span>DIS</span><b>18.4 NM</b></div>
+        <div><span>ETE</span><b>0:10</b></div>
+        <div><span>XTK</span><b>0.3 L</b></div>
+      </div>
+      <p class="note" lang="en">Quota is a support for planning and situational awareness, not a navigation instrument. Always use official charts, NOTAMs, briefings and the aircraft's instruments.</p>
+      <p class="note" lang="it">Quota è un supporto alla pianificazione e alla consapevolezza della situazione, non uno strumento di navigazione. Usa sempre carte ufficiali, NOTAM, briefing e gli strumenti dell'aereo.</p>
+    </div>
   </section>
 
-  <footer>
-    <p><a href="privacy.html">Privacy policy</a> · © 2026 Gabriele Vierti</p>
-  </footer>
+  <!-- Data -->
+  <section class="alt" id="data">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" lang="en">Open data</div><div class="eyebrow" lang="it">Dati aperti</div>
+        <h2 lang="en">Where the data comes from.</h2><h2 lang="it">Da dove vengono i dati.</h2>
+        <p lang="en">Free, public sources, credited in the app. No schedules, gates or delays: ADS-B does not carry them, so Quota does not pretend to.</p>
+        <p lang="it">Fonti pubbliche e gratuite, citate nell'app. Niente orari, gate o ritardi: l'ADS-B non li trasmette, quindi Quota non fa finta.</p>
+      </div>
+      <div class="sources">
+        <a href="https://adsb.lol">adsb.lol<small>ODbL</small></a>
+        <a href="https://flyitalyadsb.com">FlyItalyADSB<small>CC BY-SA 4.0</small></a>
+        <a href="https://www.adsbdb.com">adsbdb.com</a>
+        <a href="https://aviationweather.gov">NOAA Aviation Weather Center</a>
+        <a href="https://nomads.ncep.noaa.gov">NOAA GFS</a>
+        <a href="https://ourairports.com">OurAirports<small>Public domain</small></a>
+        <a href="https://www.openstreetmap.org/copyright">OpenStreetMap<small>ODbL</small></a>
+        <a href="https://celestrak.org">CelesTrak</a>
+        <a href="https://www.planespotters.net">Planespotters.net</a>
+        <a href="https://www.ncei.noaa.gov/products/world-magnetic-model">NOAA World Magnetic Model</a>
+        <a href="https://registry.opendata.aws/terrain-tiles/">AWS Terrain Tiles</a>
+        <a href="https://earthdata.nasa.gov">NASA GIBS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2 lang="en">Questions, answered.</h2><h2 lang="it">Domande e risposte.</h2>
+      </div>
+      <div class="faq" lang="en">
+        <details open><summary>Do I need an account or a key?</summary>
+          <p>No. Aircraft appear right away, worldwide, from adsb.lol. Nothing to sign up for.</p></details>
+        <details><summary>Why is an aircraft missing, or late?</summary>
+          <p>Coverage depends on volunteer receivers: dense over Italy and much of Europe, thinner elsewhere. Some aircraft do not broadcast their position. Between updates Quota moves aircraft along their track; positions are a few seconds old.</p></details>
+        <details><summary>Why no schedules, gates or delays?</summary>
+          <p>ADS-B does not carry them. Arrival times in Quota are its own estimates, always labelled as such.</p></details>
+        <details><summary>Can I use it to navigate?</summary>
+          <p>No. The pilot tools are a support for planning and situational awareness. Use official charts, NOTAMs, briefings, the aircraft's instruments and ATC.</p></details>
+        <details><summary>Does it work on Mac?</summary>
+          <p>Yes, on Macs with Apple silicon, as the iPad app. Features that need a camera, motion sensors or GPS (the sky finder, flight mode) are hidden there.</p></details>
+        <details><summary>What about Premium?</summary>
+          <p>An optional one-time purchase is coming in an update, with extras for enthusiasts and a way to support the developer. Everything essential stays free, and there will never be a subscription.</p></details>
+        <details><summary>What data does Quota collect?</summary>
+          <p>None. No account, no analytics, no tracking. Your saved items and settings stay on your device. Details in the <a href="privacy.html">privacy policy</a>.</p></details>
+      </div>
+      <div class="faq" lang="it">
+        <details open><summary>Serve un account o una chiave?</summary>
+          <p>No. Gli aerei compaiono subito, in tutto il mondo, da adsb.lol. Niente da registrare.</p></details>
+        <details><summary>Perché un aereo manca o è in ritardo?</summary>
+          <p>La copertura dipende da ricevitori volontari: fitta sull'Italia e su gran parte dell'Europa, più rada altrove. Alcuni aerei non trasmettono la posizione. Tra un aggiornamento e l'altro Quota fa scorrere gli aerei lungo la rotta; le posizioni hanno qualche secondo.</p></details>
+        <details><summary>Perché niente orari, gate o ritardi?</summary>
+          <p>L'ADS-B non li trasmette. Gli orari di arrivo in Quota sono stime sue, sempre indicate come tali.</p></details>
+        <details><summary>Posso usarla per navigare?</summary>
+          <p>No. Gli strumenti per piloti sono un supporto alla pianificazione e alla consapevolezza della situazione. Usa carte ufficiali, NOTAM, briefing, gli strumenti dell'aereo e l'ATC.</p></details>
+        <details><summary>Funziona su Mac?</summary>
+          <p>Sì, sui Mac con Apple silicon, come app per iPad. Le funzioni che richiedono fotocamera, sensori di movimento o GPS (il mirino nel cielo, la modalità volo) lì sono nascoste.</p></details>
+        <details><summary>E Premium?</summary>
+          <p>Un acquisto una tantum facoltativo arriverà con un aggiornamento, con extra per appassionati e un modo per sostenere lo sviluppatore. Tutto l'essenziale resta gratis e non ci sarà mai un abbonamento.</p></details>
+        <details><summary>Quali dati raccoglie Quota?</summary>
+          <p>Nessuno. Nessun account, nessuna analisi d'uso, nessun tracciamento. Elementi salvati e impostazioni restano sul tuo dispositivo. I dettagli nell'<a href="privacy.html">informativa sulla privacy</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section id="support" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" lang="en">Support</div><div class="eyebrow" lang="it">Supporto</div>
+        <h2 lang="en">A person reads every message.</h2><h2 lang="it">Ogni messaggio lo legge una persona.</h2>
+        <p lang="en">Quota is made by one independent developer in Milan. Questions, bugs and ideas are all welcome.</p>
+        <p lang="it">Quota è fatta da uno sviluppatore indipendente a Milano. Domande, problemi e idee sono tutti benvenuti.</p>
+      </div>
+      <div class="support">
+        <div class="card">
+          <h3>Email</h3>
+          <p class="mail"><a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a></p>
+          <ul lang="en">
+            <li>Your device and iOS version</li>
+            <li>For data questions, the callsign, registration or airport involved</li>
+            <li>A screenshot helps a lot</li>
+          </ul>
+          <ul lang="it">
+            <li>Il tuo dispositivo e la versione di iOS</li>
+            <li>Per domande sui dati, il nominativo, la marca o l'aeroporto</li>
+            <li>Uno screenshot aiuta molto</li>
+          </ul>
+          <p style="color:var(--muted);margin:16px 0 0" lang="en">Replies usually within a few days.</p>
+          <p style="color:var(--muted);margin:16px 0 0" lang="it">Di solito rispondo entro pochi giorni.</p>
+        </div>
+        <div class="card">
+          <h3>GitHub</h3>
+          <p style="color:var(--muted)" lang="en">Report a bug or suggest a feature in public, and follow its progress.</p>
+          <p style="color:var(--muted)" lang="it">Segnala un problema o proponi una funzione in pubblico, e seguine l'avanzamento.</p>
+          <p><a class="btn" href="https://github.com/gabrielevierti/quota-support/issues"><span lang="en">Open an issue</span><span lang="it">Apri una segnalazione</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <span class="grow">© <span data-year>2026</span> Gabriele Vierti · Quota – Flight Radar</span>
+    <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="it">Privacy</span></a>
+    <a href="#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
+    <a href="https://github.com/gabrielevierti/quota-support">GitHub</a>
+  </div>
+</footer>
+
 </body>
 </html>
