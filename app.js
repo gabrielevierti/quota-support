@@ -2,7 +2,7 @@
 (function () {
   // Paste the App Store link here once the app is live, e.g.
   // "https://apps.apple.com/app/quota-flight-radar/id1234567890"
-  var APP_STORE_URL = "";
+  var APP_STORE_URL = "https://apps.apple.com/app/id6832491263";
 
   var root = document.documentElement;
 
