@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quota – Flight Radar</title>
-<meta name="description" content="Quota – Flight Radar for iPhone, iPad, Mac and Apple Watch: live aircraft worldwide, weather on every map, your flight as a boarding pass, airports with check-in and car parks, tools for pilots and a drone mode. Free, with no ads, no account and no tracking.">
+<meta name="description" content="Quota – Flight Radar for iPhone, iPad, Mac and Apple Watch: live aircraft worldwide, weather layers, airports, tools for pilots and drone pilots. Free, with no ads, no account and no tracking.">
 <meta name="theme-color" content="#000000">
 <meta property="og:title" content="Quota – Flight Radar">
-<meta property="og:description" content="Real aircraft, nothing invented. Live traffic, weather on every map, your flight, airports, pilot and drone tools.">
+<meta property="og:description" content="Live air traffic, weather and airports for iPhone, iPad, Mac and Apple Watch. Free, no account.">
 <meta property="og:image" content="og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png">
@@ -16,20 +16,17 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="home.css">
 <script src="app.js" defer></script>
-<script src="home.js" defer></script>
+<script src="site.js" defer></script>
 </head>
 <body class="home">
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="icon.png" alt="">Quota</a>
     <nav aria-label="Sections">
+      <a href="#devices"><span lang="en">Devices</span><span lang="it">Dispositivi</span></a>
+      <a href="#features"><span lang="en">Features</span><span lang="it">Funzioni</span></a>
       <a href="#weather"><span lang="en">Weather</span><span lang="it">Meteo</span></a>
-      <a href="#flight"><span lang="en">Your flight</span><span lang="it">Il tuo volo</span></a>
-      <a href="#airports"><span lang="en">Airports</span><span lang="it">Aeroporti</span></a>
-      <a href="#ipad">iPad</a>
       <a href="#pilots"><span lang="en">Pilots</span><span lang="it">Piloti</span></a>
-      <a href="#drones"><span lang="en">Drones</span><span lang="it">Droni</span></a>
       <a href="#faq">FAQ</a>
       <a href="#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
     </nav>
@@ -43,218 +40,138 @@
 <main id="top">
 
   <!-- Hero -->
-  <section class="intro">
+  <section class="hero">
     <div class="wrap">
-      <p class="kicker" data-reveal>Quota – Flight Radar</p>
-      <h1 data-reveal>
-        <span lang="en">Real aircraft.<br>Nothing invented.</span>
-        <span lang="it">Aerei veri.<br>Niente di inventato.</span>
-      </h1>
-      <p class="sub" lang="en" data-reveal>Live traffic worldwide with the weather on every map, your flight as a boarding pass and on Apple Watch, every airport down to the car park, and tools for pilots and drone pilots.</p>
-      <p class="sub" lang="it" data-reveal>Traffico in diretta in tutto il mondo con il meteo su ogni mappa, il tuo volo come carta d'imbarco e su Apple Watch, ogni aeroporto fino al parcheggio e strumenti per piloti e per i droni.</p>
+      <h1 data-reveal><img class="hero-mark" src="mark.png" alt="">Quota</h1>
+      <p class="hero-sub" lang="en" data-reveal>Live air traffic, weather and airports.<br>For iPhone, iPad, Mac and Apple Watch.</p>
+      <p class="hero-sub" lang="it" data-reveal>Traffico aereo in diretta, meteo e aeroporti.<br>Per iPhone, iPad, Mac e Apple Watch.</p>
       <div class="actions" data-reveal>
         <a class="store" data-appstore href="#support" aria-disabled="true">
           <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span class="soon"><span lang="en">Coming soon to the App Store</span><span lang="it">In arrivo sull'App Store</span></span>
           <span class="now"><span lang="en">Download on the App Store</span><span lang="it">Scarica dall'App Store</span></span>
         </a>
-        <a class="more" href="#flight"><span lang="en">Learn more</span><span lang="it">Scopri di più</span></a>
+        <a class="more" href="#features"><span lang="en">Learn more</span><span lang="it">Scopri di più</span></a>
+      </div>
+      <p class="hero-note" data-reveal><span lang="en">Free. No ads, no account.</span><span lang="it">Gratis. Niente pubblicità né account.</span></p>
+    </div>
+    <div class="wrap hero-family">
+      <div class="family" id="devices" data-reveal>
+        <div class="fam mac"><div class="mac-screen"><div class="mac-desk mac-os"><div class="mbar"><svg class="apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><b>Quota</b><span lang="en">File</span><span lang="it">File</span><span lang="en">Edit</span><span lang="it">Modifica</span><span lang="en">View</span><span lang="it">Vista</span><span lang="en">Window</span><span lang="it">Finestra</span><span lang="en">Help</span><span lang="it">Aiuto</span><span class="clock"><span lang="en">Thu 12 Nov 18:20</span><span lang="it">gio 12 nov 18:20</span></span></div><i class="notch"></i><div class="mwin"><div class="mtitle"><i></i><i></i><i></i><span>Quota</span></div><img src="shots/ipad-vento.jpg" alt="Quota on a Mac"></div></div></div><div class="mac-base"></div></div>
+        <div class="fam dev ipad"><img src="shots/ipad-linate.jpg" alt="Quota on iPad"></div>
+        <div class="fam dev duo-open"><img src="shots/duo-interno.jpg" alt="Quota on iPhone Duo"></div>
+        <div class="fam dev iphone"><img src="shots/iphone-dettaglio.jpg" alt="Quota on iPhone"></div>
+        <div class="fam dev watch"><img src="shots/watch-dettaglio.jpg" alt="Quota on Apple Watch"></div>
+      </div>
+      <div class="fam-list" data-reveal>
+        <div><h4>iPhone</h4><p lang="en">The card slides up from the bottom. Widgets, Live Activity and the Dynamic Island.</p><p lang="it">La scheda sale dal basso. Widget, Live Activity e Dynamic Island.</p></div>
+        <div><h4>iPad</h4><p lang="en">The map fills the screen, with the details beside it, in portrait and landscape.</p><p lang="it">La mappa riempie lo schermo, con i dettagli accanto, in verticale e in orizzontale.</p></div>
+        <div><h4>iPhone Duo</h4><p lang="en">The card moves to the side when you unfold it, and back when you fold it.</p><p lang="it">La scheda passa di lato quando lo apri e torna in basso quando lo chiudi.</p></div>
+        <div><h4>Mac</h4><p lang="en">On Apple silicon, in a window you can resize.</p><p lang="it">Su Apple silicon, in una finestra che puoi ridimensionare.</p></div>
+        <div><h4>Apple Watch</h4><p lang="en">The aircraft you follow and your saved flights, with complications.</p><p lang="it">L'aereo che segui e i voli salvati, con le complicazioni.</p></div>
       </div>
     </div>
-    <div class="hero-art" data-reveal="rise" aria-hidden="true">
-      <img class="shot ipad" src="shots/ipad-vento.jpg" alt="">
-      <img class="shot phone" src="shots/iphone-meteo.jpg" alt="">
+  </section>
+
+  <!-- iPhone Duo -->
+  <section class="duo-scene" aria-label="iPhone Duo">
+    <div class="duo-pin">
+      <div class="duo-top"><div class="wrap duo-head">
+        <h2 lang="en">Optimized for iPhone Duo</h2><h2 lang="it">Ottimizzata per iPhone Duo</h2>
+        <div class="duo-captions">
+          <p class="duo-caption on" data-step="closed"><span lang="en">Closed, it works like any iPhone: the map on top, the details at the bottom.</span><span lang="it">Chiuso funziona come ogni iPhone: la mappa sopra, i dettagli in basso.</span></p>
+          <p class="duo-caption" data-step="open"><span lang="en">Unfold it and the aircraft card moves to the side, without reloading anything.</span><span lang="it">Lo apri e la scheda dell'aereo passa di lato, senza ricaricare niente.</span></p>
+          <p class="duo-caption" data-step="end"><span lang="en">The same app and the same data, folded or unfolded.</span><span lang="it">La stessa app e gli stessi dati, chiuso o aperto.</span></p>
+        </div>
+      </div></div>
+      <div class="duo-stage">
+        <div class="zoomer">
+          <div class="floor"></div>
+          <div class="book">
+            <div class="half l"><div class="face front"></div><div class="shade"></div><div class="face back"><i class="gloss"></i></div></div>
+            <div class="half r"><div class="face front"></div><div class="face back"></div></div>
+            <div class="screens">
+              <img src="shots/duo-interno.jpg" alt="" class="on">
+              <img src="shots/duo-turbolenza.jpg" alt="" loading="lazy">
+              <img src="shots/duo-pioggia.jpg" alt="" loading="lazy">
+              <img src="shots/duo-piano.jpg" alt="" loading="lazy">
+              <img src="shots/duo-drone.jpg" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg class="leader" aria-hidden="true"><rect rx="10"/><path/><circle r="4"/></svg>
+      <div class="callouts">
+        <div class="callout"><b><span lang="en">1 · Aircraft card</span><span lang="it">1 · Scheda dell'aereo</span></b><p lang="en">Beside the map: callsign, type, registration and live instruments.</p><p lang="it">Accanto alla mappa: nominativo, tipo, marche e strumenti in movimento.</p></div>
+        <div class="callout"><b><span lang="en">2 · Map buttons</span><span lang="it">2 · Pulsanti della mappa</span></b><p lang="en">They move with the card, so nothing ends up underneath.</p><p lang="it">Si spostano con la scheda, così niente finisce sotto.</p></div>
+        <div class="callout"><b><span lang="en">3 · Turbulence</span><span lang="it">3 · Turbolenza</span></b><p lang="en">Between FL240 and FL390, from the NOAA GFS forecast.</p><p lang="it">Tra FL240 e FL390, dalla previsione NOAA GFS.</p></div>
+        <div class="callout"><b><span lang="en">4 · Rain</span><span lang="it">4 · Pioggia</span></b><p lang="en">The Italian radar where it reaches, the forecast everywhere else.</p><p lang="it">Il radar italiano dove arriva, la previsione altrove.</p></div>
+        <div class="callout"><b><span lang="en">5 · Flight plan</span><span lang="it">5 · Piano di volo</span></b><p lang="en">Route, airports and the wind along the way.</p><p lang="it">Rotta, aeroporti e vento lungo la strada.</p></div>
+        <div class="callout"><b><span lang="en">6 · Drones</span><span lang="it">6 · Droni</span></b><p lang="en">Choose your drone, check the limits, start the flight.</p><p lang="it">Scegli il drone, controlla i limiti, inizia il volo.</p></div>
+      </div>
+      <div class="timeline">
+        <button type="button" class="tl-play" aria-label="Pause"><i></i></button>
+        <div class="tl-track"><div class="tl-fill"></div><div class="tl-marks"></div><div class="tl-knob"></div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Features -->
+  <section id="features" class="block tint">
+    <div class="wrap">
+      <header class="head center" data-reveal>
+        <h2 lang="en">What Quota does</h2><h2 lang="it">Cosa fa Quota</h2>
+      </header>
+      <div class="fx" data-reveal>
+        <ol class="fx-list">
+          <li class="on"><button type="button">
+            <h3 lang="en">Live aircraft</h3><h3 lang="it">Aerei in diretta</h3>
+            <p lang="en">Positions broadcast by the aircraft themselves (ADS-B) and received by community networks. Tap one for type, registration, route and live instruments.</p>
+            <p lang="it">Posizioni trasmesse dagli aerei stessi (ADS-B) e ricevute da reti di volontari. Tocchi un aereo per tipo, marche, rotta e strumenti in movimento.</p>
+            <i class="fx-bar"></i></button></li>
+          <li><button type="button">
+            <h3 lang="en">Airports</h3><h3 lang="it">Aeroporti</h3>
+            <p lang="en">Runways and terminals, a live board with the runway in use, check-in and arrivals, car parks and stations, and directions in your maps app.</p>
+            <p lang="it">Piste e terminal, un tabellone dal vivo con la pista in uso, check-in e arrivi, parcheggi e stazioni, e le indicazioni nella tua app di mappe.</p>
+            <i class="fx-bar"></i></button></li>
+          <li><button type="button">
+            <h3 lang="en">Your flights</h3><h3 lang="it">I tuoi voli</h3>
+            <p lang="en">Save a flight and follow it in widgets, Live Activity, the Dynamic Island and on Apple Watch, with a notification at take-off.</p>
+            <p lang="it">Salvi un volo e lo segui nei widget, nella Live Activity, nella Dynamic Island e su Apple Watch, con una notifica al decollo.</p>
+            <i class="fx-bar"></i></button></li>
+          <li><button type="button">
+            <h3 lang="en">History and tools</h3><h3 lang="it">Storico e strumenti</h3>
+            <p lang="en">A flight log, every aircraft you looked at, tracking sessions you can export as GPX, CSV or PDF, and statistics on what the radar has seen.</p>
+            <p lang="it">Un libretto dei voli, ogni aereo che hai guardato, sessioni di tracciamento esportabili in GPX, CSV o PDF e statistiche su ciò che ha visto il radar.</p>
+            <i class="fx-bar"></i></button></li>
+        </ol>
+        <div class="fx-phone">
+          <div class="dev iphone">
+            <img class="on" src="shots/iphone-dettaglio.jpg" alt="An aircraft card in Quota">
+            <img src="shots/iphone-tabellone.jpg" alt="An airport page with the live board" loading="lazy">
+            <img src="shots/iphone-widget.jpg" alt="A saved flight in a Home Screen widget" loading="lazy">
+            <img src="shots/iphone-salvati.jpg" alt="Saved aircraft and tools" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="facts" data-reveal>
+        <div><h4 lang="en">Private</h4><h4 lang="it">Privata</h4><p lang="en">No account, no analytics, no tracking. Sync goes through your own iCloud.</p><p lang="it">Niente account, analisi o tracciamento. La sincronizzazione passa dal tuo iCloud.</p></div>
+        <div><h4 lang="en">Free</h4><h4 lang="it">Gratis</h4><p lang="en">Every feature, with no subscription and no ads, built on open data.</p><p lang="it">Ogni funzione, senza abbonamenti né pubblicità, su dati aperti.</p></div>
+        <div><h4 lang="en">Weather on every map</h4><h4 lang="it">Meteo su ogni mappa</h4><p lang="en">Wind, rain, clouds, storms, visibility, icing, jet stream, turbulence, METAR, PIREP and SIGMET. Off by default.</p><p lang="it">Vento, pioggia, nuvole, temporali, visibilità, ghiaccio, corrente a getto, turbolenza, METAR, PIREP e SIGMET. Spenti di default.</p></div>
+      </div>
     </div>
   </section>
 
   <!-- Weather -->
-  <section id="weather" class="block tint">
+  <section id="weather" class="block">
     <div class="wrap">
       <header class="head center" data-reveal>
-        <h2 lang="en">Weather on every map.<br><span class="dim">Off until you want it.</span></h2>
-        <h2 lang="it">Il meteo su ogni mappa.<br><span class="dim">Spento finché non lo vuoi.</span></h2>
-        <p lang="en">One layers panel, the same on the radar, the flight plan, flight mode and the drone map. Everything starts off: turn on what you need.</p>
-        <p lang="it">Un solo pannello dei livelli, uguale su radar, piano di volo, modalità volo e mappa del drone. Parte tutto spento: accendi quello che ti serve.</p>
+        <h2 lang="en">Rain radar and forecast</h2><h2 lang="it">Radar pioggia e previsione</h2>
+        <p lang="en">Over Italy, the Civil Protection radar. Everywhere else, an estimate from the NOAA GFS forecast. Both drawn the same way, with adjustable opacity, and the legend always says which is which.</p>
+        <p lang="it">Sull'Italia, il radar della Protezione Civile. Nel resto del mondo, una stima dalla previsione NOAA GFS. Disegnate allo stesso modo, con opacità regolabile, e la legenda dice sempre quale è quale.</p>
       </header>
-      <div class="trio" data-reveal="rise">
-        <img class="shot phone" src="shots/iphone-meteo.jpg" alt="Animated wind and rain over northern Italy" loading="lazy">
-        <img class="shot phone" src="shots/iphone-turbolenza.jpg" alt="Estimated turbulence between FL240 and FL390" loading="lazy">
-        <img class="shot phone" src="shots/iphone-pioggia.jpg" alt="Rain over the Alps, radar and forecast" loading="lazy">
-      </div>
-      <div class="features" data-reveal>
-        <div>
-          <h4 lang="en">Wind you can see</h4><h4 lang="it">Il vento da vedere</h4>
-          <p lang="en">Animated from the NOAA GFS forecast, and corrected with the wind measured by aircraft in flight.</p>
-          <p lang="it">Animato dalla previsione NOAA GFS e corretto con il vento misurato dagli aerei in volo.</p>
-        </div>
-        <div>
-          <h4 lang="en">Rain, everywhere</h4><h4 lang="it">La pioggia, ovunque</h4>
-          <p lang="en">The Civil Protection radar over Italy, a NOAA GFS estimate elsewhere, and NASA's rain from space. Always labelled, opacity yours.</p>
-          <p lang="it">Il radar della Protezione Civile sull'Italia, una stima NOAA GFS altrove e la pioggia dallo spazio della NASA. Sempre indicate, opacità a tua scelta.</p>
-        </div>
-        <div>
-          <h4 lang="en">Forecast maps</h4><h4 lang="it">Mappe di previsione</h4>
-          <p lang="en">Clouds, thunderstorms, visibility, freezing level, icing and the jet stream, from NOAA GFS.</p>
-          <p lang="it">Nuvole, temporali, visibilità, zero termico, ghiaccio e corrente a getto, da NOAA GFS.</p>
-        </div>
-        <div>
-          <h4 lang="en">What pilots report</h4><h4 lang="it">Quello che dicono i piloti</h4>
-          <p lang="en">A turbulence estimate, PIREPs, METARs and SIGMETs, on the same map as the traffic.</p>
-          <p lang="it">Una stima della turbolenza, PIREP, METAR e SIGMET, sulla stessa mappa del traffico.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Your flight -->
-  <section id="flight" class="block">
-    <div class="wrap">
-      <header class="head" data-reveal>
-        <h2 lang="en">Your flight.<br><span class="dim">From the gate to the runway.</span></h2>
-        <h2 lang="it">Il tuo volo.<br><span class="dim">Dal gate alla pista.</span></h2>
-      </header>
-    </div>
-    <div class="rail" data-reveal>
-      <div class="track">
-        <figure class="slide">
-          <img class="shot phone" src="shots/iphone-dettaglio.jpg" alt="" loading="lazy">
-          <figcaption>
-            <h3 lang="en">Every flight, in detail.</h3><h3 lang="it">Ogni volo nel dettaglio.</h3>
-            <p lang="en">Tap any aircraft for its callsign, type and registration, with instruments that move.</p>
-            <p lang="it">Tocca un aereo per nominativo, tipo e marche, con strumenti che si muovono.</p>
-          </figcaption>
-        </figure>
-        <figure class="slide">
-          <img class="shot phone" src="shots/iphone-profilo.jpg" alt="" loading="lazy">
-          <figcaption>
-            <h3 lang="en">The whole flight, in profile.</h3><h3 lang="it">Tutto il volo, di profilo.</h3>
-            <p lang="en">Departure, track and usual route, with a vertical profile and the weather along the way.</p>
-            <p lang="it">Partenza, scia e rotta abituale, con il profilo verticale e il meteo lungo la rotta.</p>
-          </figcaption>
-        </figure>
-        <figure class="slide">
-          <img class="shot phone" src="shots/iphone-widget.jpg" alt="" loading="lazy">
-          <figcaption>
-            <h3 lang="en">Always in view.</h3><h3 lang="it">Sempre in vista.</h3>
-            <p lang="en">A boarding pass in widgets, as a Live Activity and in the Dynamic Island.</p>
-            <p lang="it">Una carta d'imbarco nei widget, come Live Activity e nella Dynamic Island.</p>
-          </figcaption>
-        </figure>
-        <figure class="slide">
-          <div class="watches">
-            <img class="shot watch" src="shots/watch-voli.jpg" alt="" loading="lazy">
-            <img class="shot watch" src="shots/watch-quadrante.jpg" alt="" loading="lazy">
-          </div>
-          <figcaption>
-            <h3 lang="en">On your wrist.</h3><h3 lang="it">Al polso.</h3>
-            <p lang="en">The aircraft you follow and your flights on Apple Watch, with complications for the watch face.</p>
-            <p lang="it">L'aereo che segui e i tuoi voli su Apple Watch, con le complicazioni per il quadrante.</p>
-          </figcaption>
-        </figure>
-        <figure class="slide">
-          <img class="shot phone" src="shots/iphone-avvisami.jpg" alt="" loading="lazy">
-          <figcaption>
-            <h3 lang="en">Notify me when it leaves.</h3><h3 lang="it">Avvisami quando parte.</h3>
-            <p lang="en">Search a flight that isn't flying yet. Quota tells you the moment it shows up.</p>
-            <p lang="it">Cerca un volo non ancora in aria. Quota ti avvisa appena compare.</p>
-          </figcaption>
-        </figure>
-        <figure class="slide">
-          <img class="shot phone" src="shots/iphone-salvati.jpg" alt="" loading="lazy">
-          <figcaption>
-            <h3 lang="en">Your flight log.</h3><h3 lang="it">Il tuo storico voli.</h3>
-            <p lang="en">Every flight you followed, on all your devices through your own iCloud, exportable as GPX, CSV or PDF.</p>
-            <p lang="it">Ogni volo che hai seguito, su tutti i tuoi dispositivi con il tuo iCloud, esportabile in GPX, CSV o PDF.</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="rail-nav wrap">
-        <button type="button" class="prev" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg></button>
-        <button type="button" class="next" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Airports -->
-  <section id="airports" class="block tint">
-    <div class="wrap">
-      <header class="head center" data-reveal>
-        <h2 lang="en">The whole airport.<br><span class="dim">On every map.</span></h2>
-        <h2 lang="it">Tutto l'aeroporto.<br><span class="dim">Su ogni mappa.</span></h2>
-      </header>
-      <div class="pair" data-reveal="rise">
-        <img class="shot phone" src="shots/iphone-aeroporto.jpg" alt="Milan Malpensa with runways and zones" loading="lazy">
-        <img class="shot phone" src="shots/iphone-tabellone.jpg" alt="Live departures board at Malpensa" loading="lazy">
-      </div>
-      <div class="features" data-reveal>
-        <div>
-          <h4 lang="en">Runways and terminals</h4><h4 lang="it">Piste e terminal</h4>
-          <p lang="en">With estimated drone zones, on the radar, the airport page and in flight mode.</p>
-          <p lang="it">Con le zone droni stimate, sul radar, nella pagina aeroporto e in modalità volo.</p>
-        </div>
-        <div>
-          <h4 lang="en">Check-in, arrivals, parking</h4><h4 lang="it">Check-in, arrivi, parcheggi</h4>
-          <p lang="en">Kerbs, car parks and stations from OpenStreetMap. One layer turns them off.</p>
-          <p lang="it">Ingressi, parcheggi e stazioni da OpenStreetMap. Un livello li spegne.</p>
-        </div>
-        <div>
-          <h4 lang="en">A live board</h4><h4 lang="it">Un tabellone dal vivo</h4>
-          <p lang="en">Arrivals and departures from live traffic, with the runway in use, holdings and go-arounds.</p>
-          <p lang="it">Arrivi e partenze dal traffico in diretta, con la pista in uso, le attese e le riattaccate.</p>
-        </div>
-        <div>
-          <h4 lang="en">Directions</h4><h4 lang="it">Indicazioni</h4>
-          <p lang="en">To check-in or arrivals, with the nearest car parks and stations, in Apple Maps, Google Maps or Waze.</p>
-          <p lang="it">Per il check-in o gli arrivi, con i parcheggi e le stazioni più vicini, in Apple Mappe, Google Maps o Waze.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- iPad -->
-  <section id="ipad" class="block">
-    <div class="wrap">
-      <header class="head center" data-reveal>
-        <h2 lang="en">Bigger on iPad.<br><span class="dim">Unfolded on iPhone Duo.</span></h2><h2 lang="it">Più grande su iPad.<br><span class="dim">Aperta su iPhone Duo.</span></h2>
-        <p lang="en">The map takes the whole screen, the details float beside it. On Macs with Apple silicon too.</p>
-        <p lang="it">La mappa prende tutto lo schermo, i dettagli fluttuano accanto. Anche sui Mac con Apple silicon.</p>
-      </header>
-      <div class="gallery" data-reveal="rise">
-        <div class="stack">
-          <img class="shot ipad on" src="shots/ipad-radar.jpg" alt="Live traffic over the Alps on iPad">
-          <img class="shot ipad" src="shots/ipad-vento.jpg" alt="Animated wind over Italy on iPad" loading="lazy">
-          <img class="shot ipad" src="shots/ipad-linate.jpg" alt="Milan Linate with runways, car parks and zones" loading="lazy">
-          <img class="shot ipad" src="shots/ipad-indicazioni.jpg" alt="Directions to car parks and the station" loading="lazy">
-          <img class="shot ipad" src="shots/ipad-pagina-volo.jpg" alt="Flight page with rain, winds aloft and nav log" loading="lazy">
-          <img class="shot ipad" src="shots/ipad-salvati.jpg" alt="Saved aircraft and tools" loading="lazy">
-        </div>
-        <div class="tabs" role="tablist">
-          <button role="tab" class="on"><span lang="en">Radar</span><span lang="it">Radar</span></button>
-          <button role="tab"><span lang="en">Wind</span><span lang="it">Vento</span></button>
-          <button role="tab"><span lang="en">Airports</span><span lang="it">Aeroporti</span></button>
-          <button role="tab"><span lang="en">Directions</span><span lang="it">Indicazioni</span></button>
-          <button role="tab"><span lang="en">Flight page</span><span lang="it">Pagina volo</span></button>
-          <button role="tab"><span lang="en">Saved</span><span lang="it">Salvati</span></button>
-        </div>
-      </div>
-      <figure class="fold" data-reveal="rise">
-        <img src="shots/duo-aperto.jpg" alt="iPhone Duo unfolded: the aircraft card beside the map" loading="lazy">
-        <figcaption lang="en">On iPhone Duo the aircraft card moves to the side as you unfold it, and back to the bottom as you fold it.</figcaption>
-        <figcaption lang="it">Su iPhone Duo la scheda dell'aereo passa di lato quando lo apri e torna in basso quando lo chiudi.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Pilots -->
-  <section id="pilots" class="block tint">
-    <div class="wrap">
-      <header class="head center" data-reveal>
-        <h2 lang="en">See the rain<br><span class="dim">before you reach it.</span></h2>
-        <h2 lang="it">Vedi la pioggia<br><span class="dim">prima di arrivarci.</span></h2>
-        <p lang="en">The Civil Protection radar over Italy and a NOAA GFS estimate everywhere else, drawn the same way at every zoom. Heavy rain on the route is flagged and Quota proposes a detour, which you decide whether to use.</p>
-        <p lang="it">Il radar della Protezione Civile sull'Italia e una stima NOAA GFS in tutto il resto del mondo, disegnati allo stesso modo a ogni zoom. La pioggia forte sulla rotta viene segnalata e Quota propone una deviazione, che decidi tu se usare.</p>
-      </header>
-
       <div class="compare" data-reveal="rise">
         <div class="frame">
           <img class="shot ipad" src="shots/ipad-radar.jpg" alt="The radar over the Alps without the rain layer">
@@ -264,94 +181,66 @@
         <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Rain layer">
         <p class="hint" lang="en">Drag to compare.</p><p class="hint" lang="it">Trascina per confrontare.</p>
       </div>
-
-      <div class="duo">
-        <div data-reveal>
-          <h3 lang="en">Flight mode.</h3><h3 lang="it">Modalità volo.</h3>
-          <p lang="en">The map first, round instruments from the device's GPS beside it, and every weather layer from one button. Winds aloft along the route, recalculated when you change it. Long-press the map to add a point or go Direct-To.</p>
-          <p lang="it">Prima la mappa, accanto gli strumenti tondi dal GPS del dispositivo, e tutti i livelli meteo da un solo pulsante. Venti in quota lungo la rotta, ricalcolati quando la cambi. Tieni premuto sulla mappa per aggiungere un punto o fare Direct-To.</p>
-          <h3 lang="en">A flight plan page.</h3><h3 lang="it">Una pagina piano di volo.</h3>
-          <p lang="en">Nav log with magnetic courses, wind correction, times and fuel, terrain profile, navaids and METAR, like an onboard computer.</p>
-          <p lang="it">Log di navigazione con rotte magnetiche, correzione vento, tempi e carburante, profilo del terreno, radioassistenze e METAR, come un computer di bordo.</p>
-        </div>
-        <img class="shot land" src="shots/iphone-volo.jpg" alt="Flight mode on iPhone in landscape, with the wind near your altitude" loading="lazy" data-reveal="rise">
-      </div>
-      <p class="fine" lang="en">Quota is a support for planning and situational awareness, not a navigation or weather-avoidance instrument. Always use official charts, NOTAMs, briefings and the aircraft's instruments.</p>
-      <p class="fine" lang="it">Quota è un supporto alla pianificazione e alla consapevolezza della situazione, non uno strumento di navigazione né per evitare il maltempo. Usa sempre carte ufficiali, NOTAM, briefing e gli strumenti dell'aereo.</p>
     </div>
   </section>
 
-  <!-- Drones -->
-  <section id="drones" class="block">
+
+  <!-- Pilots and drones -->
+  <section id="pilots" class="block tint">
     <div class="wrap">
       <header class="head center" data-reveal>
-        <h2 lang="en">Now for drones too.</h2><h2 lang="it">Ora anche per i droni.</h2>
-        <p lang="en">Before you take off, and while you fly: the zones around airports, the manned traffic nearby and the conditions, in one screen.</p>
-        <p lang="it">Prima di decollare e mentre voli: le zone intorno agli aeroporti, il traffico con pilota vicino e le condizioni, in una sola schermata.</p>
+        <h2 lang="en">For pilots and drone pilots</h2><h2 lang="it">Per piloti e piloti di droni</h2>
+        <p lang="en">Plan a flight, follow it with the map and the instruments, and fly a drone knowing what is around you.</p>
+        <p lang="it">Pianifichi un volo, lo segui con la mappa e gli strumenti, e fai volare un drone sapendo cosa c'è intorno.</p>
       </header>
-      <div class="duo flip">
-        <img class="shot phone drone-phone" src="shots/iphone-drone.jpg" alt="Drone mode: your drone, the traffic watch and its settings" loading="lazy" data-reveal="rise">
-        <div data-reveal>
-          <h3 lang="en">A traffic watch.</h3><h3 lang="it">Un controllo del traffico.</h3>
-          <p lang="en">Aircraft and helicopters within the radius you choose, with sound and vibration when one comes close and low.</p>
-          <p lang="it">Aerei ed elicotteri entro il raggio che scegli, con suono e vibrazione quando uno arriva vicino e basso.</p>
-          <h3 lang="en">Your drone, your flights.</h3><h3 lang="it">Il tuo drone, i tuoi voli.</h3>
-          <p lang="en">Visual range circle, flight and battery timers, surface wind against your drone's limit, the Kp index and a flight log.</p>
-          <p lang="it">Cerchio del raggio visivo, timer di volo e batteria, vento al suolo confrontato con il limite del tuo drone, indice Kp e libretto dei voli.</p>
+
+      <div class="prow" data-reveal>
+        <div class="prow-media"><div class="dev ipad"><img src="shots/ipad-pagina-volo.jpg" alt="The flight plan page on iPad" loading="lazy"></div></div>
+        <div class="prow-text">
+          <h3 lang="en">Flight plan</h3><h3 lang="it">Piano di volo</h3>
+          <p lang="en">Build the route from airports, VOR, NDB or coordinates, or draw it on the map. The nav log works out each leg for the aircraft you choose.</p>
+          <p lang="it">Costruisci la rotta da aeroporti, VOR, NDB o coordinate, oppure la disegni sulla mappa. Il log di navigazione calcola ogni tratta per l'aereo che scegli.</p>
+          <ul class="specs" lang="en"><li>Magnetic courses, wind correction, ground speed, times and fuel</li><li>Winds and temperatures aloft from the NOAA GFS forecast</li><li>Terrain profile along the route</li><li>SIGMET, traffic and airports along the way</li></ul>
+          <ul class="specs" lang="it"><li>Rotte magnetiche, correzione vento, velocità al suolo, tempi e carburante</li><li>Venti e temperature in quota dalla previsione NOAA GFS</li><li>Profilo del terreno lungo la rotta</li><li>SIGMET, traffico e aeroporti lungo la strada</li></ul>
         </div>
       </div>
-      <p class="fine" lang="en">Zones are estimates, not official airspace, and many low-flying aircraft are not received: look and listen. Check the official maps and rules before every flight.</p>
-      <p class="fine" lang="it">Le zone sono stime, non lo spazio aereo ufficiale, e molti aerei a bassa quota non vengono ricevuti: guarda e ascolta. Controlla le mappe e le regole ufficiali prima di ogni volo.</p>
+
+      <div class="prow rev" data-reveal>
+        <div class="prow-media"><div class="dev iphone land"><img src="shots/iphone-volo.jpg" alt="Flight mode on iPhone in landscape" loading="lazy"></div></div>
+        <div class="prow-text">
+          <h3 lang="en">Flight mode</h3><h3 lang="it">Modalità volo</h3>
+          <p lang="en">A moving map with your route and GPS instruments beside it, in portrait or landscape.</p>
+          <p lang="it">Una mappa mobile con la rotta e gli strumenti GPS accanto, in verticale o in orizzontale.</p>
+          <ul class="specs" lang="en"><li>HSI, track, ground speed and GPS altitude</li><li>Direct-To any airport</li><li>Every weather layer behind one button</li><li>Take-off and landing times in the logbook</li></ul>
+          <ul class="specs" lang="it"><li>HSI, traccia, velocità al suolo e quota GPS</li><li>Direct-To verso qualsiasi aeroporto</li><li>Tutti i livelli meteo dietro un solo pulsante</li><li>Orari di decollo e atterraggio nel libretto</li></ul>
+        </div>
+      </div>
+
+      <div class="prow" data-reveal>
+        <div class="prow-media"><div class="dev ipad swap">
+          <img class="on" src="shots/ipad-drone-setup.jpg" alt="Drone mode set-up on iPad" loading="lazy">
+          <img src="shots/ipad-drone.jpg" alt="The drone flight screen on iPad" loading="lazy">
+        </div></div>
+        <div class="prow-text">
+          <h3 lang="en">Drone mode</h3><h3 lang="it">Modalità drone</h3>
+          <p lang="en">Choose your drone and its limits, then start the flight. The flight screen keeps manned traffic and the conditions in view.</p>
+          <p lang="it">Scegli il drone e i suoi limiti, poi inizi il volo. La schermata di volo tiene in vista il traffico con pilota e le condizioni.</p>
+          <ul class="specs" lang="en"><li>Estimated zones around airports</li><li>Alerts with sound and vibration for manned aircraft nearby</li><li>Flight timer and battery reminder</li><li>Surface wind, Kp index and a log of every flight</li></ul>
+          <ul class="specs" lang="it"><li>Zone stimate intorno agli aeroporti</li><li>Avvisi con suono e vibrazione per gli aerei con pilota vicini</li><li>Timer di volo e promemoria della batteria</li><li>Vento al suolo, indice Kp e un registro di ogni volo</li></ul>
+        </div>
+      </div>
+
+      <p class="fine" lang="en">Quota is a support for planning and situational awareness, not a navigation or weather-avoidance instrument. Always use official charts, NOTAMs, briefings and your instruments. Drone zones are estimates, not official airspace.</p>
+      <p class="fine" lang="it">Quota è un supporto alla pianificazione e alla consapevolezza della situazione, non uno strumento di navigazione né per evitare il maltempo. Usa sempre carte ufficiali, NOTAM, briefing e i tuoi strumenti. Le zone per i droni sono stime, non spazio aereo ufficiale.</p>
     </div>
   </section>
 
-  <!-- More -->
-  <section class="block tint">
-    <div class="wrap">
-      <header class="head" data-reveal>
-        <h2 lang="en">And the rest of the sky.</h2><h2 lang="it">E il resto del cielo.</h2>
-      </header>
-      <div class="tiles" data-reveal>
-        <div class="tile">
-          <h4>Apple Watch</h4>
-          <p lang="en">The aircraft you follow on your wrist, with complications on the watch face.</p>
-          <p lang="it">L'aereo che segui al polso, con le complicazioni sul quadrante.</p>
-        </div>
-        <div class="tile">
-          <h4 lang="en">Erupting volcanoes</h4><h4 lang="it">Vulcani in eruzione</h4>
-          <p lang="en">The weekly Smithsonian and USGS report, as a layer on the map.</p>
-          <p lang="it">Il rapporto settimanale di Smithsonian e USGS, come livello sulla mappa.</p>
-        </div>
-        <div class="tile">
-          <h4 lang="en">What plane is that?</h4><h4 lang="it">Che aereo è quello?</h4>
-          <p lang="en">Point the camera at the sky and every aircraft gets a label.</p>
-          <p lang="it">Punta la fotocamera al cielo e ogni aereo ha la sua etichetta.</p>
-        </div>
-        <div class="tile">
-          <h4 lang="en">On all your devices</h4><h4 lang="it">Su tutti i tuoi dispositivi</h4>
-          <p lang="en">Flight plans, saved aircraft and airports, logs and checklists, through your own private iCloud.</p>
-          <p lang="it">Piani di volo, aerei e aeroporti salvati, libretti e checklist, nel tuo iCloud privato.</p>
-        </div>
-        <div class="tile">
-          <h4 lang="en">Satellites overhead</h4><h4 lang="it">Satelliti sopra di te</h4>
-          <p lang="en">Passes of the ISS, Tiangong, Hubble and Starlink, with a reminder.</p>
-          <p lang="it">Passaggi di ISS, Tiangong, Hubble e Starlink, con un promemoria.</p>
-        </div>
-        <div class="tile">
-          <h4 lang="en">Private by design</h4><h4 lang="it">Privata per scelta</h4>
-          <p lang="en">No account, no analytics, no tracking. Your data stays yours: on your devices and in your iCloud.</p>
-          <p lang="it">Nessun account, nessuna analisi, nessun tracciamento. I tuoi dati restano tuoi: sui tuoi dispositivi e nel tuo iCloud.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Free -->
+  <!-- Download -->
   <section class="block closing">
     <div class="wrap narrow" data-reveal>
-      <h2 lang="en">Free. Every feature.</h2><h2 lang="it">Gratis. Ogni funzione.</h2>
-      <p lang="en">No subscription, no ads, no account. Quota runs on open data, so it can stay that way.</p>
-      <p lang="it">Niente abbonamenti, pubblicità o account. Quota usa dati aperti, quindi può restare così.</p>
+      <h2>Quota – Flight Radar</h2>
+      <p lang="en">Free on the App Store for iPhone, iPad, Mac with Apple silicon and Apple Watch.</p>
+      <p lang="it">Gratis sull'App Store per iPhone, iPad, Mac con Apple silicon e Apple Watch.</p>
       <div class="actions">
         <a class="store" data-appstore href="#support" aria-disabled="true">
           <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
@@ -362,77 +251,92 @@
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq" class="block tint">
     <div class="wrap narrow">
       <header class="head" data-reveal>
-        <h2 lang="en">Questions.</h2><h2 lang="it">Domande.</h2>
+        <h2 lang="en">Questions</h2><h2 lang="it">Domande</h2>
       </header>
       <div class="faq" lang="en">
         <details><summary>Do I need an account or a key?</summary>
-          <p>No. Aircraft appear right away, worldwide, from adsb.lol. Nothing to sign up for.</p></details>
+          <p>No. Aircraft appear right away, worldwide, from adsb.lol.</p></details>
         <details><summary>Is it really free?</summary>
-          <p>Yes. Every feature is included: no subscription, no ads, no account. Quota uses free, open data sources, so it costs nothing to keep running.</p></details>
+          <p>Yes, every feature. The data sources are free and open and there is no server to run, so there's nothing to pay for.</p></details>
         <details><summary>Why is an aircraft missing, or late?</summary>
-          <p>Coverage depends on volunteer receivers: dense over Italy and much of Europe, thinner elsewhere. Some aircraft do not broadcast their position. Positions are a few seconds old.</p></details>
+          <p>Coverage depends on volunteers with receivers: dense over Italy and much of Europe, thinner elsewhere. Some aircraft don't broadcast their position, and positions are a few seconds old.</p></details>
         <details><summary>Why no schedules, gates or delays?</summary>
-          <p>ADS-B does not carry them. Arrival times in Quota are its own estimates, always labelled as such.</p></details>
+          <p>ADS-B doesn't carry them. Arrival times in Quota are estimates, and they're labelled that way.</p></details>
         <details><summary>Where does the rain work?</summary>
-          <p>Everywhere. Over Italy it is the Civil Protection's open radar, observed; elsewhere it is an estimate from the NOAA GFS forecast, and the map always says which. It is a support for situational awareness, not a weather-avoidance tool.</p></details>
+          <p>Everywhere. Over Italy it's the Civil Protection radar; elsewhere it's an estimate from the NOAA GFS forecast, and the legend says which. Use it to keep an eye on things, not to avoid weather.</p></details>
         <details><summary>Does it work on Apple Watch?</summary>
-          <p>Yes. The aircraft you follow on the radar and your saved flights appear on the watch, with complications for the watch face.</p></details>
+          <p>Yes. The aircraft you follow on the radar and your saved flights show up on the watch, with complications.</p></details>
         <details><summary>Can I use it to navigate?</summary>
-          <p>No. The pilot tools are a support for planning and situational awareness. Use official charts, NOTAMs, briefings, the aircraft's instruments and ATC.</p></details>
+          <p>No. The pilot and drone tools are there to help you plan and keep an eye on things. Use official charts, NOTAMs, briefings, your instruments and ATC.</p></details>
         <details><summary>Does it work on Mac?</summary>
-          <p>Yes, on Macs with Apple silicon, as the iPad app. Features that need a camera, motion sensors or GPS are hidden there.</p></details>
+          <p>Yes, on Macs with Apple silicon, as the iPad app. What needs a camera, motion sensors or GPS is hidden there.</p></details>
         <details><summary>What data does Quota collect?</summary>
-          <p>None. Your saved items, flight log and settings stay on your devices and, with sync on, in your own private iCloud, which the developer cannot read. Details in the <a href="privacy.html">privacy policy</a>.</p></details>
+          <p>None. Your saved items, log and settings stay on your devices and, if sync is on, in your own iCloud, which the developer can't read. Details in the <a href="privacy.html">privacy policy</a>.</p></details>
       </div>
       <div class="faq" lang="it">
         <details><summary>Serve un account o una chiave?</summary>
-          <p>No. Gli aerei compaiono subito, in tutto il mondo, da adsb.lol. Niente da registrare.</p></details>
+          <p>No. Gli aerei compaiono subito, in tutto il mondo, da adsb.lol.</p></details>
         <details><summary>È davvero gratis?</summary>
-          <p>Sì. Ogni funzione è inclusa: niente abbonamenti, pubblicità o account. Quota usa fonti di dati aperte e gratuite, quindi non costa nulla tenerla in piedi.</p></details>
+          <p>Sì, ogni funzione. Le fonti dei dati sono aperte e gratuite e non c'è un server da mantenere, quindi non c'è niente da pagare.</p></details>
         <details><summary>Perché un aereo manca o è in ritardo?</summary>
-          <p>La copertura dipende da ricevitori volontari: fitta sull'Italia e su gran parte dell'Europa, più rada altrove. Alcuni aerei non trasmettono la posizione. Le posizioni hanno qualche secondo.</p></details>
+          <p>La copertura dipende da volontari con un ricevitore: fitta sull'Italia e su gran parte dell'Europa, più rada altrove. Alcuni aerei non trasmettono la posizione, e le posizioni hanno qualche secondo.</p></details>
         <details><summary>Perché niente orari, gate o ritardi?</summary>
-          <p>L'ADS-B non li trasmette. Gli orari di arrivo in Quota sono stime sue, sempre indicate come tali.</p></details>
+          <p>L'ADS-B non li trasmette. Gli orari di arrivo in Quota sono stime, e sono scritti come tali.</p></details>
         <details><summary>Dove funziona la pioggia?</summary>
-          <p>Ovunque. Sull'Italia è il radar aperto della Protezione Civile, osservato; altrove è una stima dalla previsione NOAA GFS, e la mappa dice sempre quale delle due. È un supporto alla consapevolezza della situazione, non uno strumento per evitare il maltempo.</p></details>
+          <p>Ovunque. Sull'Italia è il radar della Protezione Civile; altrove è una stima dalla previsione NOAA GFS, e la legenda dice quale delle due. Usala per tenere d'occhio la situazione, non per evitare il maltempo.</p></details>
         <details><summary>Funziona su Apple Watch?</summary>
-          <p>Sì. L'aereo che segui sul radar e i voli salvati compaiono sull'orologio, con le complicazioni per il quadrante.</p></details>
+          <p>Sì. L'aereo che segui sul radar e i voli salvati compaiono sull'orologio, con le complicazioni.</p></details>
         <details><summary>Posso usarla per navigare?</summary>
-          <p>No. Gli strumenti per piloti sono un supporto alla pianificazione e alla consapevolezza della situazione. Usa carte ufficiali, NOTAM, briefing, gli strumenti dell'aereo e l'ATC.</p></details>
+          <p>No. Gli strumenti per piloti e droni servono a pianificare e a tenere d'occhio la situazione. Usa carte ufficiali, NOTAM, briefing, i tuoi strumenti e l'ATC.</p></details>
         <details><summary>Funziona su Mac?</summary>
-          <p>Sì, sui Mac con Apple silicon, come app per iPad. Le funzioni che richiedono fotocamera, sensori di movimento o GPS lì sono nascoste.</p></details>
+          <p>Sì, sui Mac con Apple silicon, come app per iPad. Lì è nascosto quello che richiede fotocamera, sensori di movimento o GPS.</p></details>
         <details><summary>Quali dati raccoglie Quota?</summary>
-          <p>Nessuno. Salvati, storico voli e impostazioni restano sui tuoi dispositivi e, con la sincronizzazione attiva, nel tuo iCloud privato, che lo sviluppatore non può leggere. I dettagli nell'<a href="privacy.html">informativa sulla privacy</a>.</p></details>
+          <p>Nessuno. Salvati, storico e impostazioni restano sui tuoi dispositivi e, se la sincronizzazione è attiva, nel tuo iCloud, che lo sviluppatore non può leggere. I dettagli nell'<a href="privacy.html">informativa sulla privacy</a>.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- Support -->
   <section id="support" class="block">
     <div class="wrap narrow">
       <header class="head" data-reveal>
-        <h2 lang="en">Support.</h2><h2 lang="it">Supporto.</h2>
-        <p lang="en">Quota is made by one independent developer in Milan, and a person reads every message.</p>
-        <p lang="it">Quota è fatta da uno sviluppatore indipendente a Milano, e ogni messaggio lo legge una persona.</p>
+        <h2 lang="en">Support</h2><h2 lang="it">Supporto</h2>
+        <p lang="en">Report a problem, flag data that doesn't match what you see, or suggest an improvement. Every report is read, and the details below are what make it possible to reproduce the problem and fix it in an update.</p>
+        <p lang="it">Segnala un problema, un dato che non corrisponde a quello che vedi o proponi un miglioramento. Ogni segnalazione viene letta, e i dettagli qui sotto sono ciò che permette di riprodurre il problema e correggerlo in un aggiornamento.</p>
       </header>
-      <div class="contact" data-reveal>
-        <div>
-          <h4>Email</h4>
-          <p><a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a></p>
-          <p class="dim" lang="en">Include your device and iOS version, and the callsign or airport if it's about data. A screenshot helps.</p>
-          <p class="dim" lang="it">Indica dispositivo e versione di iOS, e il nominativo o l'aeroporto se riguarda i dati. Uno screenshot aiuta.</p>
+      <form class="report" data-reveal novalidate>
+        <div class="field full">
+          <span class="label"><span lang="en">Type</span><span lang="it">Tipo</span></span>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="kind" value="bug" checked><span lang="en">Problem</span><span lang="it">Problema</span></label>
+            <label><input type="radio" name="kind" value="data"><span lang="en">Wrong data</span><span lang="it">Dato errato</span></label>
+            <label><input type="radio" name="kind" value="idea"><span lang="en">Suggestion</span><span lang="it">Suggerimento</span></label>
+            <label><input type="radio" name="kind" value="other"><span lang="en">Other</span><span lang="it">Altro</span></label>
+          </div>
         </div>
-        <div>
-          <h4>GitHub</h4>
-          <p><a href="https://github.com/gabrielevierti/quota-support/issues"><span lang="en">Open an issue</span><span lang="it">Apri una segnalazione</span></a></p>
-          <p class="dim" lang="en">Report a bug or suggest a feature in public, and follow its progress.</p>
-          <p class="dim" lang="it">Segnala un problema o proponi una funzione in pubblico, e seguine l'avanzamento.</p>
+        <label class="field full"><span class="label"><span lang="en">Summary</span><span lang="it">In breve</span></span>
+          <input name="summary" required maxlength="120" data-ph-en="e.g. The rain layer doesn't show on the flight plan map" data-ph-it="es. Il livello pioggia non compare sulla mappa del piano di volo"></label>
+        <label class="field"><span class="label"><span lang="en">Device</span><span lang="it">Dispositivo</span></span>
+          <input name="device" required data-ph-en="e.g. iPhone 17 Pro" data-ph-it="es. iPhone 17 Pro"></label>
+        <label class="field"><span class="label"><span lang="en">System version</span><span lang="it">Versione del sistema</span></span>
+          <input name="os" required data-ph-en="e.g. iOS 27.1" data-ph-it="es. iOS 27.1"></label>
+        <label class="field"><span class="label"><span lang="en">Quota version</span><span lang="it">Versione di Quota</span></span>
+          <input name="app" required data-ph-en="e.g. 1.2" data-ph-it="es. 1.2"></label>
+        <label class="field"><span class="label"><span lang="en">Aircraft or airport</span><span lang="it">Aereo o aeroporto</span> <em><span lang="en">optional</span><span lang="it">facoltativo</span></em></span>
+          <input name="ref" data-ph-en="Callsign, registration or ICAO code" data-ph-it="Nominativo, marche o codice ICAO"></label>
+        <label class="field full"><span class="label"><span lang="en">What happened</span><span lang="it">Cosa è successo</span></span>
+          <textarea name="what" required rows="5" data-ph-en="What you did, what you expected and what happened instead. If it happens every time, the steps to make it happen again." data-ph-it="Cosa hai fatto, cosa ti aspettavi e cosa è successo invece. Se succede sempre, i passaggi per farlo succedere di nuovo."></textarea></label>
+        <div class="form-foot full">
+          <p class="dim" lang="en">Your mail app opens with the report ready to send. Attach a screenshot if you can.</p>
+          <p class="dim" lang="it">Si apre la tua app di posta con la segnalazione pronta da inviare. Se puoi, allega uno screenshot.</p>
+          <button type="submit" class="send"><span lang="en">Prepare the email</span><span lang="it">Prepara l'email</span></button>
         </div>
-      </div>
+        <p class="form-error full" role="alert" hidden><span lang="en">Fill in the fields marked in red.</span><span lang="it">Compila i campi segnati in rosso.</span></p>
+      </form>
+      <p class="alt" data-reveal><span lang="en">Prefer to report in public and follow the progress?</span><span lang="it">Preferisci segnalare in pubblico e seguirne l'avanzamento?</span>
+        <a class="more" href="https://github.com/gabrielevierti/quota-support/issues"><span lang="en">Open an issue on GitHub</span><span lang="it">Apri una segnalazione su GitHub</span></a></p>
     </div>
   </section>
 
@@ -457,8 +361,7 @@
       <a href="https://www.ncei.noaa.gov/products/world-magnetic-model">NOAA WMM</a>,
       <a href="https://registry.opendata.aws/terrain-tiles/">AWS Terrain Tiles</a>,
       <a href="https://earthdata.nasa.gov">NASA GIBS</a> (GPM IMERG, VIIRS).
-      <span lang="en">No schedules, gates or delays: ADS-B does not carry them, so Quota does not pretend to.</span>
-      <span lang="it">Niente orari, gate o ritardi: l'ADS-B non li trasmette, quindi Quota non fa finta.</span>
+
     </p>
     <div class="row">
       <span>© <span data-year>2026</span> Gabriele Vierti</span>
@@ -471,3 +374,4 @@
 
 </body>
 </html>
+

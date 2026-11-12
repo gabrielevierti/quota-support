@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quota – Flight Radar · Privacy Policy</title>
-<meta name="description" content="Quota collects no personal data: no account, no analytics, no tracking.">
-<meta name="theme-color" content="#060b16">
+<title>Privacy Policy · Quota – Flight Radar</title>
+<meta name="description" content="Quota collects no personal data: no account, no analytics, no tracking, no server of its own.">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <script src="app.js" defer></script>
 </head>
-<body>
+<body class="home policy-page">
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="icon.png" alt="">Quota</a>
     <nav aria-label="Sections">
+      <a href="index.html"><span lang="en">Home</span><span lang="it">Home</span></a>
       <a href="index.html#features"><span lang="en">Features</span><span lang="it">Funzioni</span></a>
       <a href="index.html#faq">FAQ</a>
       <a href="index.html#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
-      <a href="privacy.html">Privacy</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
     </nav>
     <div class="langs" role="group" aria-label="Language">
       <button type="button" data-set="en">EN</button>
@@ -29,136 +31,190 @@
   </div>
 </header>
 
-<main class="doc">
-  <div class="wrap">
+<main class="policy">
 
-    <!-- English -->
-    <div lang="en">
-      <div class="eyebrow">Quota – Flight Radar</div>
-      <h1>Privacy Policy</h1>
-      <div class="meta">Last updated 12 November 2026</div>
-
-      <div class="highlights">
-        <div class="card"><b>No personal data</b><span style="color:var(--muted)">No account, no sign-in, no analytics, no tracking SDK.</span></div>
-        <div class="card"><b>No server of ours</b><span style="color:var(--muted)">The app talks directly to the public data services below.</span></div>
-        <div class="card"><b>Yours only</b><span style="color:var(--muted)">Saved items, history, logbook and settings stay on your devices and in your own iCloud.</span></div>
+  <!-- English -->
+  <div lang="en">
+    <section class="policy-hero">
+      <div class="wrap narrow">
+        <p class="eyebrow">Quota – Flight Radar</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">Quota collects no personal data. There is no account, no sign-in, no advertising, no analytics and no tracking, and the developer runs no server: the app talks directly to the public data services listed on this page.</p>
+        <p class="date">Last updated 12 November 2026</p>
       </div>
+    </section>
 
-      <p><strong>Quota collects no personal data.</strong> There is no account, no sign-in, no advertising, no advertising identifier, no analytics and no tracking SDK. The developer operates no server: the app talks directly to the public data services listed below.</p>
-      <p><strong>App Store privacy label.</strong> The label lists <em>Contact Info – Email Address</em>, used for app functionality and never for tracking. This only concerns the optional <em>Get your free key</em> request: the email you type is sent to FlyItalyADSB, which keeps it to send you your key. The developer never receives it.</p>
-
-      <h2>What stays on your device</h2>
-      <ul>
-        <li><strong>Location:</strong> requested only when you use a location feature, with approximate accuracy by default. Used on the device to centre the map, list nearby airports or compute satellite passes. Never stored, never transmitted.</li>
-        <li><strong>Flight mode:</strong> uses precise GPS and the motion sensors while it is open, on the device only. The logbook it fills (times and airports of take-off and landing) is stored on your device (and in your iCloud with sync on) and leaves it only if you export it yourself. Drone mode uses precise GPS the same way while its flight screen is open.</li>
-        <li><strong>Saved aircraft and airports, tracked flights, search and viewing history, tracking sessions, flight plans, settings:</strong> stored on your device and, with iCloud sync on, in your iCloud. Deleting the app deletes them from the device.</li>
-        <li><strong>iCloud sync (on by default, Settings › iCloud):</strong> stored flight plans, saved aircraft and airports, My flights, the flight log, the flights you are waiting for, aircraft and drone profiles, checklists and the logbook are kept in your own iCloud account, in a private space that only your devices signed in to that account can read. The developer cannot read it. Turn sync off to keep everything on one device.</li>
-        <li><strong>Apple Watch:</strong> the iPhone sends the flights you follow straight to your paired watch (WatchConnectivity), for the app and its complications. Nothing passes through a server.</li>
-        <li><strong>Your FlyItalyADSB API key:</strong> stored in the iOS Keychain on this device only (not in iCloud backups), sent only to FlyItalyADSB with each request, removable at any time in Settings › Data source.</li>
-        <li><strong>Widgets and Live Activities:</strong> read a snapshot written by the app on the same device. They never connect to the network.</li>
+    <section class="wrap narrow">
+      <ul class="summary">
+        <li><b>No personal data</b><span>No account, no advertising identifier, no analytics or tracking SDK.</span></li>
+        <li><b>No server of its own</b><span>Requests go straight from your device to the services below.</span></li>
+        <li><b>Your data stays yours</b><span>Saved items, history, logbook and settings stay on your devices and in your own iCloud.</span></li>
       </ul>
 
-      <h2>Third-party services the app contacts</h2>
-      <p>Each request contains only what is needed for the feature, never your identity, location or device identifiers. Like any web server, each service receives your IP address; their own privacy policies apply.</p>
-      <ul>
-        <li><strong>adsb.lol</strong>: live aircraft for the map area on screen and aircraft details (the request contains only coordinates, a radius or an aircraft identifier). This is the default source.</li>
-        <li><strong>FlyItalyADSB</strong> (flyitalyadsb.com): with your own key, live aircraft, aircraft details, observed flights and tracks. If you use <em>Get your free key</em>, the email address you type is sent directly to FlyItalyADSB so they can email you a one-time link; Quota never sees, stores or forwards it anywhere else.</li>
-        <li><strong>adsbdb.com</strong>: the usual route of an airline callsign (the request contains only the callsign).</li>
-        <li><strong>“Which aircraft is that?”</strong>: the camera is only shown on screen, never recorded or sent; your precise position is used on the device while that screen is open and not stored.</li>
-        <li><strong>CelesTrak</strong> (celestrak.org): the orbits of the space stations, Hubble and recently launched satellites such as Starlink (the requests contain nothing about you); passes, transits and reminders are computed and scheduled on the device.</li>
-        <li><strong>Terrain Tiles on AWS Open Data</strong> (s3.amazonaws.com): ground elevation for the terrain profile in the Flight tab; the request contains only the tile numbers of your route's area.</li>
-        <li><strong>NOAA GFS forecast</strong> (nomads.ncep.noaa.gov): winds, temperatures, the rain estimate, the turbulence estimate and the forecast maps for the map on screen and the Flight tab, and the surface wind for drones; the request contains only a box around the area or the route.</li>
-        <li><strong>OpenStreetMap</strong> (Overpass API): the ground layout of an airport you open (the request contains only the area around that airport).</li>
-        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): airport weather (the request contains only the airport code) worldwide SIGMET areas and pilot reports (PIREP) for the area on screen (the requests contain nothing about you).</li>
-        <li><strong>NOAA Space Weather Prediction Center</strong> (services.swpc.noaa.gov): the Kp index for drone mode (the request contains nothing about you).</li>
-        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): optional satellite images, clouds and the rain seen from space, for the area on screen (the request contains only the map area).</li>
-        <li><strong>Smithsonian Global Volcanism Program</strong> (volcano.si.edu): the weekly list of erupting volcanoes (the request contains nothing about you).</li>
-        <li><strong>Radar-DPC</strong> (Protezione Civile, radar-api.protezionecivile.it and its Amazon S3 storage): the latest rain radar picture of Italy, only when you turn on the rain layer on a map (the request contains nothing about you; your route is checked on the device).</li>
-        <li><strong>Apple</strong>: the place name in the optional “where it is now” notification is looked up with Apple’s geocoder from the aircraft’s position (not yours).</li>
-        <li><strong>On the device only</strong>: the flight log, the flights you are waiting for and the take-offs and landings seen at airports are stored on your device and, with sync on, in your iCloud.</li>
-        <li><strong>Planespotters.net</strong>: a photo of the aircraft you open (the request contains only its registration or ICAO address). Photos are kept in memory only.</li>
-        <li><strong>Apple</strong>: maps (MapKit), geocoding for time zones and, when offered, purchases (StoreKit). Quota receives only Apple’s signed confirmation of a purchase; it never sees payment details.</li>
-      </ul>
+      <h2>What stays on your devices</h2>
+      <dl class="rows">
+        <dt>Location</dt>
+        <dd>Requested only when you use a feature that needs it, with approximate accuracy by default. Used on the device to centre the map, list nearby airports or compute satellite passes. Never stored and never transmitted.</dd>
+        <dt>Flight mode and drone mode</dt>
+        <dd>Use precise GPS and the motion sensors while their flight screen is open, on the device only. The logbook (times and airports of take-off and landing) stays on your device, and in your iCloud with sync on, and leaves it only if you export it.</dd>
+        <dt>Saved items and history</dt>
+        <dd>Saved aircraft and airports, tracked flights, the flights you are waiting for, the flight log, take-offs and landings seen at airports, search and viewing history, tracking sessions, flight plans and settings are stored on your device. Deleting the app deletes them from the device.</dd>
+        <dt>iCloud sync</dt>
+        <dd>On by default, in Settings › iCloud. Flight plans, saved aircraft and airports, My flights, the flight log, the flights you are waiting for, aircraft and drone profiles, checklists and the logbook are kept in your own iCloud account, in a private space that only your devices signed in to that account can read. The developer cannot read it. Turn sync off to keep everything on one device.</dd>
+        <dt>Apple Watch</dt>
+        <dd>The iPhone sends the flights you follow straight to your paired watch (WatchConnectivity) for the app and its complications. Nothing passes through a server.</dd>
+        <dt>Widgets and Live Activities</dt>
+        <dd>Read a snapshot written by the app on the same device. They never connect to the network.</dd>
+        <dt>FlyItalyADSB key</dt>
+        <dd>If you add one, it is stored in the Keychain on this device only (not in iCloud backups), sent only to FlyItalyADSB with each request, and removable at any time in Settings › Data source.</dd>
+        <dt>Camera</dt>
+        <dd>“Which aircraft is that?” only shows the camera on screen: nothing is recorded or sent. Your precise position is used on the device while that screen is open and is not stored.</dd>
+      </dl>
+
+      <h2>Services the app contacts</h2>
+      <p>Each request carries only what the feature needs, never your identity, your position or device identifiers. Like any web server, each service receives your IP address, and its own privacy policy applies.</p>
+      <dl class="rows">
+        <dt>adsb.lol<small>Default source</small></dt>
+        <dd>Live aircraft for the area on screen and aircraft details. The request contains only coordinates, a radius or an aircraft identifier.</dd>
+        <dt>FlyItalyADSB<small>flyitalyadsb.com</small></dt>
+        <dd>With your own key: live aircraft, details, observed flights and tracks. If you use <em>Get your free key</em>, the email address you type is sent directly to FlyItalyADSB so they can send you a link; Quota never sees, stores or forwards it.</dd>
+        <dt>adsbdb.com</dt>
+        <dd>The usual route of an airline callsign. The request contains only the callsign.</dd>
+        <dt>Planespotters.net</dt>
+        <dd>A photo of the aircraft you open. The request contains only its registration or ICAO address; photos are kept in memory only.</dd>
+        <dt>NOAA GFS<small>nomads.ncep.noaa.gov</small></dt>
+        <dd>Winds, temperatures, the rain and turbulence estimates and the forecast maps, for the area on screen or the route, and the surface wind for drones. The request contains only a box around the area or the route.</dd>
+        <dt>NOAA Aviation Weather Center<small>aviationweather.gov</small></dt>
+        <dd>Airport weather (only the airport code), worldwide SIGMET areas and pilot reports for the area on screen.</dd>
+        <dt>NOAA Space Weather Prediction Center<small>services.swpc.noaa.gov</small></dt>
+        <dd>The Kp index for drone mode. The request contains nothing about you.</dd>
+        <dt>Radar-DPC, Protezione Civile<small>radar-api.protezionecivile.it</small></dt>
+        <dd>The latest rain radar picture of Italy, only when the rain layer is on. The request contains nothing about you; your route is checked on the device.</dd>
+        <dt>NASA GIBS<small>earthdata.nasa.gov</small></dt>
+        <dd>Optional satellite images, clouds and rain seen from space. The request contains only the map area.</dd>
+        <dt>OpenStreetMap<small>Overpass API</small></dt>
+        <dd>The ground layout of an airport you open. The request contains only the area around that airport.</dd>
+        <dt>Terrain Tiles on AWS Open Data<small>s3.amazonaws.com</small></dt>
+        <dd>Ground elevation for the terrain profile in the Flight tab. The request contains only the tile numbers of your route's area.</dd>
+        <dt>CelesTrak<small>celestrak.org</small></dt>
+        <dd>The orbits of the space stations, Hubble and recently launched satellites. Passes, transits and reminders are computed and scheduled on the device.</dd>
+        <dt>Smithsonian Global Volcanism Program<small>volcano.si.edu</small></dt>
+        <dd>The weekly list of erupting volcanoes. The request contains nothing about you.</dd>
+        <dt>Apple</dt>
+        <dd>Maps (MapKit) and geocoding, for time zones and for the place name in the optional “where it is now” notification, looked up from the aircraft's position, not yours. When purchases are offered, StoreKit: Quota receives only Apple's signed confirmation and never sees payment details.</dd>
+      </dl>
       <p>Airport, runway, frequency and navaid data (OurAirports, public domain) and the magnetic model (NOAA WMM2025) are bundled with the app and never requested.</p>
 
+      <h2>App Store privacy label</h2>
+      <p>The label lists <em>Contact Info – Email Address</em>, used for app functionality and never for tracking. It refers only to the optional <em>Get your free key</em> request described above: the address goes to FlyItalyADSB, and the developer never receives it.</p>
+
       <h2>Diagnostics</h2>
-      <p>The app writes minimal technical logs to the device’s system log (OSLog), with no personal data. Nothing is sent to the developer.</p>
+      <p>The app writes minimal technical logs to the device's system log, with no personal data. Nothing is sent to the developer.</p>
 
       <h2>Children</h2>
-      <p>Quota is not directed at children. The developer collects no data from anyone.</p>
+      <p>Quota is not directed at children, and it collects no data from anyone.</p>
 
-      <h2>Changes and contact</h2>
-      <p>Changes to this policy are published on this page with a new date. Questions: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a>.</p>
-    </div>
+      <h2>Changes and questions</h2>
+      <p>Changes to this policy are published on this page with a new date. For questions, use the <a href="index.html#support">support form</a>.</p>
+    </section>
+  </div>
 
-    <!-- Italiano -->
-    <div lang="it">
-      <div class="eyebrow">Quota – Flight Radar</div>
-      <h1>Informativa sulla privacy</h1>
-      <div class="meta">Ultimo aggiornamento: 12 novembre 2026</div>
-
-      <div class="highlights">
-        <div class="card"><b>Nessun dato personale</b><span style="color:var(--muted)">Nessun account, nessun accesso, nessuna analisi d'uso, nessun tracciamento.</span></div>
-        <div class="card"><b>Nessun server nostro</b><span style="color:var(--muted)">L'app parla direttamente con i servizi pubblici elencati sotto.</span></div>
-        <div class="card"><b>Solo tuoi</b><span style="color:var(--muted)">Elementi salvati, cronologia, libretto e impostazioni restano sui tuoi dispositivi e nel tuo iCloud.</span></div>
+  <!-- Italiano -->
+  <div lang="it">
+    <section class="policy-hero">
+      <div class="wrap narrow">
+        <p class="eyebrow">Quota – Flight Radar</p>
+        <h1>Informativa sulla privacy</h1>
+        <p class="lead">Quota non raccoglie dati personali. Nessun account, nessun accesso, nessuna pubblicità, nessuna analisi d'uso e nessun tracciamento, e lo sviluppatore non gestisce alcun server: l'app parla direttamente con i servizi pubblici elencati in questa pagina.</p>
+        <p class="date">Ultimo aggiornamento: 12 novembre 2026</p>
       </div>
+    </section>
 
-      <p><strong>Quota non raccoglie dati personali.</strong> Nessun account, nessun accesso, nessuna pubblicità, nessun identificatore pubblicitario, nessuna analisi d’uso, nessun SDK di tracciamento. Lo sviluppatore non gestisce alcun server: l’app parla direttamente con i servizi pubblici elencati sotto.</p>
-      <p><strong>Etichetta privacy dell’App Store.</strong> L’etichetta indica <em>Informazioni di contatto – Indirizzo email</em>, usato per il funzionamento dell’app e mai per il tracciamento. Riguarda solo la richiesta facoltativa <em>Ottieni la tua chiave gratuita</em>: l’email che digiti viene inviata a FlyItalyADSB, che la conserva per mandarti la chiave. Lo sviluppatore non la riceve mai.</p>
-
-      <h2>Cosa resta sul tuo dispositivo</h2>
-      <ul>
-        <li><strong>Posizione:</strong> richiesta solo quando usi una funzione di localizzazione, con precisione approssimativa di default. Usata sul dispositivo per centrare la mappa, elencare gli aeroporti vicini o calcolare i passaggi dei satelliti. Mai salvata, mai trasmessa.</li>
-        <li><strong>Modalità volo:</strong> usa il GPS preciso e i sensori di movimento mentre è aperta, solo sul dispositivo. Il libretto che compila (orari e aeroporti di decollo e atterraggio) resta sul tuo dispositivo (e nel tuo iCloud con la sincronizzazione attiva) e lo lascia solo se lo esporti tu. La modalità drone usa il GPS preciso allo stesso modo mentre è aperta la sua schermata di volo.</li>
-        <li><strong>Aerei e aeroporti salvati, voli seguiti, cronologia di ricerca e visualizzazione, sessioni di tracciamento, piani di volo, impostazioni:</strong> sul tuo dispositivo e, con la sincronizzazione iCloud attiva, nel tuo iCloud. Eliminando l’app si eliminano dal dispositivo.</li>
-        <li><strong>Sincronizzazione iCloud (attiva di default, Impostazioni › iCloud):</strong> piani di volo memorizzati, aerei e aeroporti salvati, I miei voli, lo storico voli, i voli che aspetti, i profili di aerei e droni, le checklist e il libretto sono conservati nel tuo account iCloud, in uno spazio privato che solo i tuoi dispositivi collegati a quell’account possono leggere. Lo sviluppatore non può leggerlo. Disattiva la sincronizzazione per tenere tutto su un solo dispositivo.</li>
-        <li><strong>Apple Watch:</strong> l’iPhone invia i voli che segui direttamente all’orologio abbinato (WatchConnectivity), per l’app e le complicazioni. Niente passa da un server.</li>
-        <li><strong>La tua chiave API FlyItalyADSB:</strong> nel Portachiavi iOS solo su questo dispositivo (non nei backup iCloud), inviata solo a FlyItalyADSB, rimovibile in Impostazioni › Fonte dati.</li>
-        <li><strong>Widget e Live Activity:</strong> leggono una fotografia scritta dall’app sullo stesso dispositivo. Non si collegano mai alla rete.</li>
+    <section class="wrap narrow">
+      <ul class="summary">
+        <li><b>Nessun dato personale</b><span>Nessun account, nessun identificatore pubblicitario, nessun SDK di analisi o tracciamento.</span></li>
+        <li><b>Nessun server proprio</b><span>Le richieste vanno direttamente dal tuo dispositivo ai servizi elencati sotto.</span></li>
+        <li><b>I tuoi dati restano tuoi</b><span>Salvati, cronologia, libretto e impostazioni restano sui tuoi dispositivi e nel tuo iCloud.</span></li>
       </ul>
 
-      <h2>Servizi di terzi contattati dall’app</h2>
-      <p>Ogni richiesta contiene solo ciò che serve alla funzione, mai la tua identità, posizione o identificatori del dispositivo. Come ogni server web, ciascun servizio riceve il tuo indirizzo IP; valgono le loro informative.</p>
-      <ul>
-        <li><strong>adsb.lol</strong>: aerei in diretta per l’area di mappa visibile e dettagli (la richiesta contiene solo coordinate, un raggio o un identificativo dell’aereo). È la fonte predefinita.</li>
-        <li><strong>FlyItalyADSB</strong> (flyitalyadsb.com): con la tua chiave, aerei in diretta, dettagli, voli osservati e tracce. Se usi <em>Ottieni la tua chiave gratuita</em>, l’email che digiti viene inviata direttamente a FlyItalyADSB per ricevere il link; Quota non la vede, non la salva e non la inoltra altrove.</li>
-        <li><strong>adsbdb.com</strong>: rotta abituale di un nominativo di linea (solo il nominativo).</li>
-        <li><strong>“Che aereo è quello?”</strong>: la fotocamera è solo mostrata sullo schermo, mai registrata né inviata; la tua posizione precisa è usata sul dispositivo mentre la schermata è aperta e non viene salvata.</li>
-        <li><strong>CelesTrak</strong> (celestrak.org): le orbite delle stazioni spaziali, di Hubble e dei satelliti lanciati di recente come gli Starlink (le richieste non contengono niente su di te); passaggi, transiti e promemoria sono calcolati e programmati sul dispositivo.</li>
-        <li><strong>Terrain Tiles su AWS Open Data</strong> (s3.amazonaws.com): l’altezza del terreno per il profilo nella scheda Volo; la richiesta contiene solo i numeri delle tessere dell’area della rotta.</li>
-        <li><strong>Previsioni NOAA GFS</strong> (nomads.ncep.noaa.gov): venti, temperature, stima della pioggia e della turbolenza e mappe di previsione per la mappa visibile e la scheda Volo, e il vento al suolo per i droni; la richiesta contiene solo un riquadro attorno all’area o alla rotta.</li>
-        <li><strong>OpenStreetMap</strong> (Overpass API): la mappa a terra dell’aeroporto che apri (solo l’area intorno a quell’aeroporto).</li>
-        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): meteo aeroportuale (solo il codice dell’aeroporto) aree SIGMET mondiali e rapporti dei piloti (PIREP) per l’area visibile (le richieste non contengono niente su di te).</li>
-        <li><strong>NOAA Space Weather Prediction Center</strong> (services.swpc.noaa.gov): l’indice Kp per la modalità drone (la richiesta non contiene niente su di te).</li>
-        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): immagini satellitari facoltative, nuvole e pioggia vista dallo spazio, per l’area visibile (la richiesta contiene solo l’area della mappa).</li>
-        <li><strong>Smithsonian Global Volcanism Program</strong> (volcano.si.edu): l’elenco settimanale dei vulcani in eruzione (la richiesta non contiene niente su di te).</li>
-        <li><strong>Radar-DPC</strong> (Protezione Civile, radar-api.protezionecivile.it e il suo archivio Amazon S3): l’ultima immagine del radar pioggia sull’Italia, solo se attivi il livello pioggia su una mappa (la richiesta non contiene niente su di te; la rotta viene controllata sul dispositivo).</li>
-        <li><strong>Apple</strong>: il nome del luogo nella notifica facoltativa “dove si trova ora” viene cercato con il geocoder di Apple a partire dalla posizione dell’aereo (non dalla tua).</li>
-        <li><strong>Solo sul dispositivo</strong>: lo storico voli, i voli che stai aspettando e i decolli e atterraggi visti negli aeroporti restano sul tuo dispositivo e, con la sincronizzazione attiva, nel tuo iCloud.</li>
-        <li><strong>Planespotters.net</strong>: la foto dell’aereo che apri (solo marche o indirizzo ICAO). Le foto restano solo in memoria.</li>
-        <li><strong>Apple</strong>: mappe (MapKit), geocodifica per i fusi orari e, quando offerti, acquisti (StoreKit). Quota riceve solo la conferma firmata di un acquisto; non vede mai i dati di pagamento.</li>
-      </ul>
-      <p>Dati di aeroporti, piste, frequenze e radioassistenze (OurAirports, pubblico dominio) e il modello magnetico (NOAA WMM2025) sono inclusi nell’app e mai richiesti.</p>
+      <h2>Cosa resta sui tuoi dispositivi</h2>
+      <dl class="rows">
+        <dt>Posizione</dt>
+        <dd>Richiesta solo quando usi una funzione che ne ha bisogno, con precisione approssimativa di default. Usata sul dispositivo per centrare la mappa, elencare gli aeroporti vicini o calcolare i passaggi dei satelliti. Mai salvata e mai trasmessa.</dd>
+        <dt>Modalità volo e modalità drone</dt>
+        <dd>Usano il GPS preciso e i sensori di movimento mentre è aperta la loro schermata di volo, solo sul dispositivo. Il libretto (orari e aeroporti di decollo e atterraggio) resta sul tuo dispositivo, e nel tuo iCloud con la sincronizzazione attiva, e lo lascia solo se lo esporti tu.</dd>
+        <dt>Salvati e cronologia</dt>
+        <dd>Aerei e aeroporti salvati, voli seguiti, voli che aspetti, storico voli, decolli e atterraggi visti negli aeroporti, cronologia di ricerca e visualizzazione, sessioni di tracciamento, piani di volo e impostazioni restano sul tuo dispositivo. Eliminando l'app si eliminano dal dispositivo.</dd>
+        <dt>Sincronizzazione iCloud</dt>
+        <dd>Attiva di default, in Impostazioni › iCloud. Piani di volo, aerei e aeroporti salvati, I miei voli, lo storico voli, i voli che aspetti, i profili di aerei e droni, le checklist e il libretto sono conservati nel tuo account iCloud, in uno spazio privato che solo i tuoi dispositivi collegati a quell'account possono leggere. Lo sviluppatore non può leggerlo. Disattiva la sincronizzazione per tenere tutto su un solo dispositivo.</dd>
+        <dt>Apple Watch</dt>
+        <dd>L'iPhone invia i voli che segui direttamente all'orologio abbinato (WatchConnectivity), per l'app e le complicazioni. Niente passa da un server.</dd>
+        <dt>Widget e Live Activity</dt>
+        <dd>Leggono una fotografia scritta dall'app sullo stesso dispositivo. Non si collegano mai alla rete.</dd>
+        <dt>Chiave FlyItalyADSB</dt>
+        <dd>Se ne aggiungi una, è conservata nel Portachiavi solo su questo dispositivo (non nei backup iCloud), inviata solo a FlyItalyADSB a ogni richiesta e rimovibile in qualsiasi momento in Impostazioni › Fonte dati.</dd>
+        <dt>Fotocamera</dt>
+        <dd>“Che aereo è quello?” mostra la fotocamera solo sullo schermo: niente viene registrato o inviato. La tua posizione precisa è usata sul dispositivo mentre la schermata è aperta e non viene salvata.</dd>
+      </dl>
+
+      <h2>Servizi contattati dall'app</h2>
+      <p>Ogni richiesta contiene solo ciò che serve alla funzione, mai la tua identità, la tua posizione o identificatori del dispositivo. Come ogni server web, ciascun servizio riceve il tuo indirizzo IP, e vale la sua informativa.</p>
+      <dl class="rows">
+        <dt>adsb.lol<small>Fonte predefinita</small></dt>
+        <dd>Aerei in diretta per l'area visibile e dettagli degli aerei. La richiesta contiene solo coordinate, un raggio o un identificativo dell'aereo.</dd>
+        <dt>FlyItalyADSB<small>flyitalyadsb.com</small></dt>
+        <dd>Con la tua chiave: aerei in diretta, dettagli, voli osservati e tracce. Se usi <em>Ottieni la tua chiave gratuita</em>, l'email che digiti viene inviata direttamente a FlyItalyADSB per ricevere un link; Quota non la vede, non la salva e non la inoltra.</dd>
+        <dt>adsbdb.com</dt>
+        <dd>La rotta abituale di un nominativo di linea. La richiesta contiene solo il nominativo.</dd>
+        <dt>Planespotters.net</dt>
+        <dd>La foto dell'aereo che apri. La richiesta contiene solo marche o indirizzo ICAO; le foto restano solo in memoria.</dd>
+        <dt>NOAA GFS<small>nomads.ncep.noaa.gov</small></dt>
+        <dd>Venti, temperature, stime di pioggia e turbolenza e mappe di previsione, per l'area visibile o la rotta, e il vento al suolo per i droni. La richiesta contiene solo un riquadro attorno all'area o alla rotta.</dd>
+        <dt>NOAA Aviation Weather Center<small>aviationweather.gov</small></dt>
+        <dd>Meteo aeroportuale (solo il codice dell'aeroporto), aree SIGMET mondiali e rapporti dei piloti per l'area visibile.</dd>
+        <dt>NOAA Space Weather Prediction Center<small>services.swpc.noaa.gov</small></dt>
+        <dd>L'indice Kp per la modalità drone. La richiesta non contiene niente su di te.</dd>
+        <dt>Radar-DPC, Protezione Civile<small>radar-api.protezionecivile.it</small></dt>
+        <dd>L'ultima immagine del radar pioggia sull'Italia, solo con il livello pioggia attivo. La richiesta non contiene niente su di te; la rotta viene controllata sul dispositivo.</dd>
+        <dt>NASA GIBS<small>earthdata.nasa.gov</small></dt>
+        <dd>Immagini satellitari facoltative, nuvole e pioggia vista dallo spazio. La richiesta contiene solo l'area della mappa.</dd>
+        <dt>OpenStreetMap<small>Overpass API</small></dt>
+        <dd>La mappa a terra dell'aeroporto che apri. La richiesta contiene solo l'area intorno a quell'aeroporto.</dd>
+        <dt>Terrain Tiles su AWS Open Data<small>s3.amazonaws.com</small></dt>
+        <dd>L'altezza del terreno per il profilo nella scheda Volo. La richiesta contiene solo i numeri delle tessere dell'area della rotta.</dd>
+        <dt>CelesTrak<small>celestrak.org</small></dt>
+        <dd>Le orbite delle stazioni spaziali, di Hubble e dei satelliti lanciati di recente. Passaggi, transiti e promemoria sono calcolati e programmati sul dispositivo.</dd>
+        <dt>Smithsonian Global Volcanism Program<small>volcano.si.edu</small></dt>
+        <dd>L'elenco settimanale dei vulcani in eruzione. La richiesta non contiene niente su di te.</dd>
+        <dt>Apple</dt>
+        <dd>Mappe (MapKit) e geocodifica, per i fusi orari e per il nome del luogo nella notifica facoltativa “dove si trova ora”, cercato dalla posizione dell'aereo, non dalla tua. Quando sono offerti acquisti, StoreKit: Quota riceve solo la conferma firmata di Apple e non vede mai i dati di pagamento.</dd>
+      </dl>
+      <p>Dati di aeroporti, piste, frequenze e radioassistenze (OurAirports, pubblico dominio) e il modello magnetico (NOAA WMM2025) sono inclusi nell'app e mai richiesti.</p>
+
+      <h2>Etichetta privacy dell'App Store</h2>
+      <p>L'etichetta indica <em>Informazioni di contatto – Indirizzo email</em>, usato per il funzionamento dell'app e mai per il tracciamento. Riguarda solo la richiesta facoltativa <em>Ottieni la tua chiave gratuita</em> descritta sopra: l'indirizzo va a FlyItalyADSB e lo sviluppatore non lo riceve mai.</p>
 
       <h2>Diagnostica</h2>
-      <p>L’app scrive log tecnici minimi nel registro di sistema del dispositivo, senza dati personali. Nulla viene inviato allo sviluppatore.</p>
+      <p>L'app scrive log tecnici minimi nel registro di sistema del dispositivo, senza dati personali. Nulla viene inviato allo sviluppatore.</p>
 
       <h2>Minori</h2>
-      <p>Quota non è rivolta ai minori. Lo sviluppatore non raccoglie dati da nessuno.</p>
+      <p>Quota non è rivolta ai minori e non raccoglie dati da nessuno.</p>
 
-      <h2>Modifiche e contatti</h2>
-      <p>Le modifiche sono pubblicate in questa pagina con una nuova data. Domande: <a href="mailto:gabriele.vierti@gmail.com">gabriele.vierti@gmail.com</a>.</p>
-    </div>
-
+      <h2>Modifiche e domande</h2>
+      <p>Le modifiche a questa informativa sono pubblicate in questa pagina con una nuova data. Per domande, usa il <a href="index.html#support">modulo di supporto</a>.</p>
+    </section>
   </div>
+
 </main>
 
-<footer>
+<footer class="foot">
   <div class="wrap">
-    <span class="grow">© <span data-year>2026</span> Gabriele Vierti · Quota – Flight Radar</span>
-    <a href="index.html"><span lang="en">Home</span><span lang="it">Home</span></a>
-    <a href="index.html#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
-    <a href="https://github.com/gabrielevierti/quota-support">GitHub</a>
+    <div class="row">
+      <span>© <span data-year>2026</span> Gabriele Vierti</span>
+      <a href="index.html"><span lang="en">Home</span><span lang="it">Home</span></a>
+      <a href="index.html#support"><span lang="en">Support</span><span lang="it">Supporto</span></a>
+      <a href="https://github.com/gabrielevierti/quota-support">GitHub</a>
+    </div>
   </div>
 </footer>
 
