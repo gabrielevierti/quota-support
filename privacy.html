@@ -36,12 +36,12 @@
     <div lang="en">
       <div class="eyebrow">Quota – Flight Radar</div>
       <h1>Privacy Policy</h1>
-      <div class="meta">Last updated 10 November 2026</div>
+      <div class="meta">Last updated 12 November 2026</div>
 
       <div class="highlights">
         <div class="card"><b>No personal data</b><span style="color:var(--muted)">No account, no sign-in, no analytics, no tracking SDK.</span></div>
         <div class="card"><b>No server of ours</b><span style="color:var(--muted)">The app talks directly to the public data services below.</span></div>
-        <div class="card"><b>On your device</b><span style="color:var(--muted)">Saved items, history, logbook and settings never leave it.</span></div>
+        <div class="card"><b>Yours only</b><span style="color:var(--muted)">Saved items, history, logbook and settings stay on your devices and in your own iCloud.</span></div>
       </div>
 
       <p><strong>Quota collects no personal data.</strong> There is no account, no sign-in, no advertising, no advertising identifier, no analytics and no tracking SDK. The developer operates no server: the app talks directly to the public data services listed below.</p>
@@ -50,8 +50,10 @@
       <h2>What stays on your device</h2>
       <ul>
         <li><strong>Location:</strong> requested only when you use a location feature, with approximate accuracy by default. Used on the device to centre the map, list nearby airports or compute satellite passes. Never stored, never transmitted.</li>
-        <li><strong>Flight mode:</strong> uses precise GPS and the motion sensors while it is open, on the device only. The logbook it fills (times and airports of take-off and landing) is stored only on your device and leaves it only if you export it yourself.</li>
-        <li><strong>Saved aircraft and airports, tracked flights, search and viewing history, tracking sessions, flight plans, settings:</strong> stored only on your device. Deleting the app deletes them.</li>
+        <li><strong>Flight mode:</strong> uses precise GPS and the motion sensors while it is open, on the device only. The logbook it fills (times and airports of take-off and landing) is stored on your device (and in your iCloud with sync on) and leaves it only if you export it yourself. Drone mode uses precise GPS the same way while its flight screen is open.</li>
+        <li><strong>Saved aircraft and airports, tracked flights, search and viewing history, tracking sessions, flight plans, settings:</strong> stored on your device and, with iCloud sync on, in your iCloud. Deleting the app deletes them from the device.</li>
+        <li><strong>iCloud sync (on by default, Settings › iCloud):</strong> stored flight plans, saved aircraft and airports, My flights, the flight log, the flights you are waiting for, aircraft and drone profiles, checklists and the logbook are kept in your own iCloud account, in a private space that only your devices signed in to that account can read. The developer cannot read it. Turn sync off to keep everything on one device.</li>
+        <li><strong>Apple Watch:</strong> the iPhone sends the flights you follow straight to your paired watch (WatchConnectivity), for the app and its complications. Nothing passes through a server.</li>
         <li><strong>Your FlyItalyADSB API key:</strong> stored in the iOS Keychain on this device only (not in iCloud backups), sent only to FlyItalyADSB with each request, removable at any time in Settings › Data source.</li>
         <li><strong>Widgets and Live Activities:</strong> read a snapshot written by the app on the same device. They never connect to the network.</li>
       </ul>
@@ -65,14 +67,15 @@
         <li><strong>“Which aircraft is that?”</strong>: the camera is only shown on screen, never recorded or sent; your precise position is used on the device while that screen is open and not stored.</li>
         <li><strong>CelesTrak</strong> (celestrak.org): the orbits of the space stations, Hubble and recently launched satellites such as Starlink (the requests contain nothing about you); passes, transits and reminders are computed and scheduled on the device.</li>
         <li><strong>Terrain Tiles on AWS Open Data</strong> (s3.amazonaws.com): ground elevation for the terrain profile in the Flight tab; the request contains only the tile numbers of your route's area.</li>
-        <li><strong>NOAA GFS forecast</strong> (nomads.ncep.noaa.gov): winds and temperatures aloft for the Flight tab; the request contains only a box of about one degree around your route.</li>
+        <li><strong>NOAA GFS forecast</strong> (nomads.ncep.noaa.gov): winds, temperatures, the rain estimate, the turbulence estimate and the forecast maps for the map on screen and the Flight tab, and the surface wind for drones; the request contains only a box around the area or the route.</li>
         <li><strong>OpenStreetMap</strong> (Overpass API): the ground layout of an airport you open (the request contains only the area around that airport).</li>
-        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): airport weather (the request contains only the airport code) and worldwide SIGMET areas (the request contains nothing specific).</li>
-        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): optional satellite cloud and precipitation map tiles.</li>
+        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): airport weather (the request contains only the airport code) worldwide SIGMET areas and pilot reports (PIREP) for the area on screen (the requests contain nothing about you).</li>
+        <li><strong>NOAA Space Weather Prediction Center</strong> (services.swpc.noaa.gov): the Kp index for drone mode (the request contains nothing about you).</li>
+        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): optional satellite images, clouds and the rain seen from space, for the area on screen (the request contains only the map area).</li>
         <li><strong>Smithsonian Global Volcanism Program</strong> (volcano.si.edu): the weekly list of erupting volcanoes (the request contains nothing about you).</li>
-        <li><strong>Radar-DPC</strong> (Protezione Civile, radar-api.protezionecivile.it and its Amazon S3 storage): the latest rain radar picture of Italy, only when you turn on the rain layer in flight mode (the request contains nothing about you; your route is checked on the device).</li>
+        <li><strong>Radar-DPC</strong> (Protezione Civile, radar-api.protezionecivile.it and its Amazon S3 storage): the latest rain radar picture of Italy, only when you turn on the rain layer on a map (the request contains nothing about you; your route is checked on the device).</li>
         <li><strong>Apple</strong>: the place name in the optional “where it is now” notification is looked up with Apple’s geocoder from the aircraft’s position (not yours).</li>
-        <li><strong>On the device only</strong>: the flight log, the flights you are waiting for and the take-offs and landings seen at airports are stored only on your device. For the optional squawk 7700/7600 alerts your position is compared on the device with a worldwide list; it is never sent.</li>
+        <li><strong>On the device only</strong>: the flight log, the flights you are waiting for and the take-offs and landings seen at airports are stored on your device and, with sync on, in your iCloud.</li>
         <li><strong>Planespotters.net</strong>: a photo of the aircraft you open (the request contains only its registration or ICAO address). Photos are kept in memory only.</li>
         <li><strong>Apple</strong>: maps (MapKit), geocoding for time zones and, when offered, purchases (StoreKit). Quota receives only Apple’s signed confirmation of a purchase; it never sees payment details.</li>
       </ul>
@@ -92,12 +95,12 @@
     <div lang="it">
       <div class="eyebrow">Quota – Flight Radar</div>
       <h1>Informativa sulla privacy</h1>
-      <div class="meta">Ultimo aggiornamento: 10 novembre 2026</div>
+      <div class="meta">Ultimo aggiornamento: 12 novembre 2026</div>
 
       <div class="highlights">
         <div class="card"><b>Nessun dato personale</b><span style="color:var(--muted)">Nessun account, nessun accesso, nessuna analisi d'uso, nessun tracciamento.</span></div>
         <div class="card"><b>Nessun server nostro</b><span style="color:var(--muted)">L'app parla direttamente con i servizi pubblici elencati sotto.</span></div>
-        <div class="card"><b>Sul tuo dispositivo</b><span style="color:var(--muted)">Elementi salvati, cronologia, libretto e impostazioni non lo lasciano mai.</span></div>
+        <div class="card"><b>Solo tuoi</b><span style="color:var(--muted)">Elementi salvati, cronologia, libretto e impostazioni restano sui tuoi dispositivi e nel tuo iCloud.</span></div>
       </div>
 
       <p><strong>Quota non raccoglie dati personali.</strong> Nessun account, nessun accesso, nessuna pubblicità, nessun identificatore pubblicitario, nessuna analisi d’uso, nessun SDK di tracciamento. Lo sviluppatore non gestisce alcun server: l’app parla direttamente con i servizi pubblici elencati sotto.</p>
@@ -106,8 +109,10 @@
       <h2>Cosa resta sul tuo dispositivo</h2>
       <ul>
         <li><strong>Posizione:</strong> richiesta solo quando usi una funzione di localizzazione, con precisione approssimativa di default. Usata sul dispositivo per centrare la mappa, elencare gli aeroporti vicini o calcolare i passaggi dei satelliti. Mai salvata, mai trasmessa.</li>
-        <li><strong>Modalità volo:</strong> usa il GPS preciso e i sensori di movimento mentre è aperta, solo sul dispositivo. Il libretto che compila (orari e aeroporti di decollo e atterraggio) resta solo sul tuo dispositivo e lo lascia solo se lo esporti tu.</li>
-        <li><strong>Aerei e aeroporti salvati, voli seguiti, cronologia di ricerca e visualizzazione, sessioni di tracciamento, piani di volo, impostazioni:</strong> solo sul tuo dispositivo. Eliminando l’app si eliminano.</li>
+        <li><strong>Modalità volo:</strong> usa il GPS preciso e i sensori di movimento mentre è aperta, solo sul dispositivo. Il libretto che compila (orari e aeroporti di decollo e atterraggio) resta sul tuo dispositivo (e nel tuo iCloud con la sincronizzazione attiva) e lo lascia solo se lo esporti tu. La modalità drone usa il GPS preciso allo stesso modo mentre è aperta la sua schermata di volo.</li>
+        <li><strong>Aerei e aeroporti salvati, voli seguiti, cronologia di ricerca e visualizzazione, sessioni di tracciamento, piani di volo, impostazioni:</strong> sul tuo dispositivo e, con la sincronizzazione iCloud attiva, nel tuo iCloud. Eliminando l’app si eliminano dal dispositivo.</li>
+        <li><strong>Sincronizzazione iCloud (attiva di default, Impostazioni › iCloud):</strong> piani di volo memorizzati, aerei e aeroporti salvati, I miei voli, lo storico voli, i voli che aspetti, i profili di aerei e droni, le checklist e il libretto sono conservati nel tuo account iCloud, in uno spazio privato che solo i tuoi dispositivi collegati a quell’account possono leggere. Lo sviluppatore non può leggerlo. Disattiva la sincronizzazione per tenere tutto su un solo dispositivo.</li>
+        <li><strong>Apple Watch:</strong> l’iPhone invia i voli che segui direttamente all’orologio abbinato (WatchConnectivity), per l’app e le complicazioni. Niente passa da un server.</li>
         <li><strong>La tua chiave API FlyItalyADSB:</strong> nel Portachiavi iOS solo su questo dispositivo (non nei backup iCloud), inviata solo a FlyItalyADSB, rimovibile in Impostazioni › Fonte dati.</li>
         <li><strong>Widget e Live Activity:</strong> leggono una fotografia scritta dall’app sullo stesso dispositivo. Non si collegano mai alla rete.</li>
       </ul>
@@ -121,14 +126,15 @@
         <li><strong>“Che aereo è quello?”</strong>: la fotocamera è solo mostrata sullo schermo, mai registrata né inviata; la tua posizione precisa è usata sul dispositivo mentre la schermata è aperta e non viene salvata.</li>
         <li><strong>CelesTrak</strong> (celestrak.org): le orbite delle stazioni spaziali, di Hubble e dei satelliti lanciati di recente come gli Starlink (le richieste non contengono niente su di te); passaggi, transiti e promemoria sono calcolati e programmati sul dispositivo.</li>
         <li><strong>Terrain Tiles su AWS Open Data</strong> (s3.amazonaws.com): l’altezza del terreno per il profilo nella scheda Volo; la richiesta contiene solo i numeri delle tessere dell’area della rotta.</li>
-        <li><strong>Previsioni NOAA GFS</strong> (nomads.ncep.noaa.gov): venti e temperature in quota per la scheda Volo; la richiesta contiene solo un riquadro di circa un grado attorno alla rotta.</li>
+        <li><strong>Previsioni NOAA GFS</strong> (nomads.ncep.noaa.gov): venti, temperature, stima della pioggia e della turbolenza e mappe di previsione per la mappa visibile e la scheda Volo, e il vento al suolo per i droni; la richiesta contiene solo un riquadro attorno all’area o alla rotta.</li>
         <li><strong>OpenStreetMap</strong> (Overpass API): la mappa a terra dell’aeroporto che apri (solo l’area intorno a quell’aeroporto).</li>
-        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): meteo aeroportuale (solo il codice dell’aeroporto) e aree SIGMET mondiali.</li>
-        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): tessere satellitari facoltative di nuvole e precipitazioni.</li>
+        <li><strong>NOAA Aviation Weather Center</strong> (aviationweather.gov): meteo aeroportuale (solo il codice dell’aeroporto) aree SIGMET mondiali e rapporti dei piloti (PIREP) per l’area visibile (le richieste non contengono niente su di te).</li>
+        <li><strong>NOAA Space Weather Prediction Center</strong> (services.swpc.noaa.gov): l’indice Kp per la modalità drone (la richiesta non contiene niente su di te).</li>
+        <li><strong>NASA GIBS</strong> (earthdata.nasa.gov): immagini satellitari facoltative, nuvole e pioggia vista dallo spazio, per l’area visibile (la richiesta contiene solo l’area della mappa).</li>
         <li><strong>Smithsonian Global Volcanism Program</strong> (volcano.si.edu): l’elenco settimanale dei vulcani in eruzione (la richiesta non contiene niente su di te).</li>
-        <li><strong>Radar-DPC</strong> (Protezione Civile, radar-api.protezionecivile.it e il suo archivio Amazon S3): l’ultima immagine del radar pioggia sull’Italia, solo se attivi il livello pioggia in modalità volo (la richiesta non contiene niente su di te; la rotta viene controllata sul dispositivo).</li>
+        <li><strong>Radar-DPC</strong> (Protezione Civile, radar-api.protezionecivile.it e il suo archivio Amazon S3): l’ultima immagine del radar pioggia sull’Italia, solo se attivi il livello pioggia su una mappa (la richiesta non contiene niente su di te; la rotta viene controllata sul dispositivo).</li>
         <li><strong>Apple</strong>: il nome del luogo nella notifica facoltativa “dove si trova ora” viene cercato con il geocoder di Apple a partire dalla posizione dell’aereo (non dalla tua).</li>
-        <li><strong>Solo sul dispositivo</strong>: lo storico voli, i voli che stai aspettando e i decolli e atterraggi visti negli aeroporti restano solo sul tuo dispositivo. Per gli avvisi facoltativi squawk 7700/7600 la tua posizione viene confrontata sul dispositivo con un elenco mondiale; non viene mai inviata.</li>
+        <li><strong>Solo sul dispositivo</strong>: lo storico voli, i voli che stai aspettando e i decolli e atterraggi visti negli aeroporti restano sul tuo dispositivo e, con la sincronizzazione attiva, nel tuo iCloud.</li>
         <li><strong>Planespotters.net</strong>: la foto dell’aereo che apri (solo marche o indirizzo ICAO). Le foto restano solo in memoria.</li>
         <li><strong>Apple</strong>: mappe (MapKit), geocodifica per i fusi orari e, quando offerti, acquisti (StoreKit). Quota riceve solo la conferma firmata di un acquisto; non vede mai i dati di pagamento.</li>
       </ul>

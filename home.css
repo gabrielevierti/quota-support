@@ -187,3 +187,15 @@ html[data-lang="it"] .home .langs [data-set="it"] { background: rgba(255, 255, 2
   .stack > img { transition: none; }
 }
 .home .brand, .home .brand:hover { color: var(--ink); }
+
+/* 1.2: three phones in a row (weather), Apple Watch in the flight gallery, iPhone Duo under the iPad gallery, drones. */
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 280px)); justify-content: center; gap: 44px; }
+@media (max-width: 860px) { .trio { gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.watches { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: center; aspect-ratio: 300 / 652; }
+.shot.watch { border-radius: 24% / 20%; }
+.fold { margin: 110px auto 0; max-width: 860px; text-align: center; }
+.fold img { display: block; width: 100%; height: auto; }
+.fold figcaption { color: var(--gray); font-size: 17px; margin-top: 22px; }
+.duo.flip { grid-template-columns: 1.25fr 1fr; margin-top: 0; }
+@media (max-width: 860px) { .duo.flip { grid-template-columns: 1fr; } }
+.drone-phone { max-width: 300px; margin: 0 auto; }
