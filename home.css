@@ -143,7 +143,7 @@ html[data-lang="it"] .home .langs [data-set="it"] { background: rgba(255, 255, 2
 .mac-os .mtitle i:nth-child(1) { left: 1.4cqw; }
 .mac-os .mtitle i:nth-child(2) { left: 3.2cqw; background: #febc2e; }
 .mac-os .mtitle i:nth-child(3) { left: 5cqw; background: #28c840; }
-.mac-os .mwin img { display: block; width: 100%; aspect-ratio: 1376 / 1004; object-fit: cover; object-position: center bottom; }
+.mac-os .mwin img { display: block; width: 100%; aspect-ratio: 1600 / 1203; object-fit: cover; object-position: center top; }
 .family .fam.dev { box-shadow: 0 0 0 1.5px var(--rim), 0 30px 60px -20px rgba(0, 0, 0, .9); }
 .hero-family { margin-top: 80px; }
 .hero .fam-list { text-align: left; margin-bottom: 40px; }
@@ -417,3 +417,18 @@ html[data-lang="it"] .home .langs [data-set="it"] { background: rgba(255, 255, 2
   .rows dt { border-bottom: 0; padding-bottom: 4px; }
   .rows dd { padding-top: 0; }
 }
+
+/* Privacy page: the brand back to the home page, top left. */
+.home .top .top-brand { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; gap: 8px; font-size: 15px; }
+.home .top .top-brand img { width: 22px; height: 22px; border-radius: 0; object-fit: contain; }
+.policy-closing { border-top: 1px solid var(--hair); margin-top: 40px; }
+@media (max-width: 700px) {
+  .home .top .top-brand span { display: none; }
+  .home .top nav { gap: 16px; }
+}
+
+/* App Store QR code: only where the visitor is not already on a phone. */
+.qr { display: none; margin: 40px auto 0; width: max-content; text-align: center; }
+.qr img { display: block; width: 132px; height: 132px; padding: 14px; background: #fff; border-radius: 18px; box-sizing: content-box; }
+.qr figcaption { margin-top: 12px; font-size: 13px; color: var(--gray-2); }
+@media (min-width: 861px) and (hover: hover) { .qr { display: block; } }

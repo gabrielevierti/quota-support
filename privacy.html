@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Quota – Flight Radar</title>
-<meta name="description" content="Quota collects no personal data: no account, no analytics, no tracking, no server of its own.">
+<meta name="description" content="Quota collects no personal data: no account, no analytics, no tracking.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -17,6 +17,7 @@
 
 <header class="top">
   <div class="wrap">
+    <a class="brand top-brand" href="index.html" aria-label="Quota"><img src="mark.png" alt=""><span>Quota</span></a>
     <nav aria-label="Sections">
       <a href="index.html"><span lang="en">Home</span><span lang="it">Home</span></a>
       <a href="index.html#features"><span lang="en">Features</span><span lang="it">Funzioni</span></a>
@@ -39,15 +40,15 @@
       <div class="wrap narrow">
         <p class="eyebrow">Quota – Flight Radar</p>
         <h1>Privacy Policy</h1>
-        <p class="lead">Quota collects no personal data. There is no account, no sign-in, no advertising, no analytics and no tracking, and the developer runs no server: the app talks directly to the public data services listed on this page.</p>
-        <p class="date">Last updated 12 November 2026</p>
+        <p class="lead">Quota collects no personal data. There is no account, no sign-in, no advertising, no analytics and no tracking, and almost every request goes straight from the app to the public data services listed on this page. The one exception is the small notification service described below, which knows only flight codes and a notification token.</p>
+        <p class="date">Last updated 13 November 2026</p>
       </div>
     </section>
 
     <section class="wrap narrow">
       <ul class="summary">
         <li><b>No personal data</b><span>No account, no advertising identifier, no analytics or tracking SDK.</span></li>
-        <li><b>No server of its own</b><span>Requests go straight from your device to the services below.</span></li>
+        <li><b>Almost no server</b><span>Requests go straight from your device to the services below; only take-off alerts pass through Quota's own small service.</span></li>
         <li><b>Your data stays yours</b><span>Saved items, history, logbook and settings stay on your devices and in your own iCloud.</span></li>
       </ul>
 
@@ -64,7 +65,7 @@
         <dt>Apple Watch</dt>
         <dd>The iPhone sends the flights you follow straight to your paired watch (WatchConnectivity) for the app and its complications. Nothing passes through a server.</dd>
         <dt>Widgets and Live Activities</dt>
-        <dd>Read a snapshot written by the app on the same device. They never connect to the network.</dd>
+        <dd>Read a snapshot written by the app on the same device. A flight widget set to a flight code, and the area widget, ask adsb.lol (and adsbdb.com for the route) for that code or for the saved area's coordinates, like the app does. Your own location is never used by widgets.</dd>
         <dt>FlyItalyADSB key</dt>
         <dd>If you add one, it is stored in the Keychain on this device only (not in iCloud backups), sent only to FlyItalyADSB with each request, and removable at any time in Settings › Data source.</dd>
         <dt>Camera</dt>
@@ -105,6 +106,9 @@
       </dl>
       <p>Airport, runway, frequency and navaid data (OurAirports, public domain) and the magnetic model (NOAA WMM2025) are bundled with the app and never requested.</p>
 
+      <h2>Take-off alerts and recorded tracks</h2>
+      <p>So that “Notify me when it leaves” works with the app closed, Quota uses a small service run by the developer on Cloudflare Workers. It receives only: the flight codes you are waiting for (with the departure airport), the ICAO addresses of the aircraft you follow or saved, the language for the notification text and an Apple push token, which lets Apple deliver the notification to this device and identifies nothing else about you. Once a minute it asks adsb.lol where those flights are; when one takes off it sends the notification through Apple and deletes the request. For the aircraft you follow it keeps one position a minute for up to 72 hours, so the replay has no gaps, and then deletes it. No name, email, location, contacts or analytics are stored. If you never wait for a flight or follow an aircraft, nothing is sent. Cloudflare's own privacy policy applies to the infrastructure.</p>
+
       <h2>App Store privacy label</h2>
       <p>The label lists <em>Contact Info – Email Address</em>, used for app functionality and never for tracking. It refers only to the optional <em>Get your free key</em> request described above: the address goes to FlyItalyADSB, and the developer never receives it.</p>
 
@@ -125,15 +129,15 @@
       <div class="wrap narrow">
         <p class="eyebrow">Quota – Flight Radar</p>
         <h1>Informativa sulla privacy</h1>
-        <p class="lead">Quota non raccoglie dati personali. Nessun account, nessun accesso, nessuna pubblicità, nessuna analisi d'uso e nessun tracciamento, e lo sviluppatore non gestisce alcun server: l'app parla direttamente con i servizi pubblici elencati in questa pagina.</p>
-        <p class="date">Ultimo aggiornamento: 12 novembre 2026</p>
+        <p class="lead">Quota non raccoglie dati personali. Nessun account, nessun accesso, nessuna pubblicità, nessuna analisi d'uso e nessun tracciamento, e quasi ogni richiesta va direttamente dall'app ai servizi pubblici elencati in questa pagina. L'unica eccezione è il piccolo servizio per le notifiche descritto sotto, che conosce solo codici di volo e un token per le notifiche.</p>
+        <p class="date">Ultimo aggiornamento: 13 novembre 2026</p>
       </div>
     </section>
 
     <section class="wrap narrow">
       <ul class="summary">
         <li><b>Nessun dato personale</b><span>Nessun account, nessun identificatore pubblicitario, nessun SDK di analisi o tracciamento.</span></li>
-        <li><b>Nessun server proprio</b><span>Le richieste vanno direttamente dal tuo dispositivo ai servizi elencati sotto.</span></li>
+        <li><b>Quasi nessun server</b><span>Le richieste vanno direttamente dal tuo dispositivo ai servizi elencati sotto; solo gli avvisi di decollo passano dal piccolo servizio di Quota.</span></li>
         <li><b>I tuoi dati restano tuoi</b><span>Salvati, cronologia, libretto e impostazioni restano sui tuoi dispositivi e nel tuo iCloud.</span></li>
       </ul>
 
@@ -150,7 +154,7 @@
         <dt>Apple Watch</dt>
         <dd>L'iPhone invia i voli che segui direttamente all'orologio abbinato (WatchConnectivity), per l'app e le complicazioni. Niente passa da un server.</dd>
         <dt>Widget e Live Activity</dt>
-        <dd>Leggono una fotografia scritta dall'app sullo stesso dispositivo. Non si collegano mai alla rete.</dd>
+        <dd>Leggono una fotografia scritta dall'app sullo stesso dispositivo. Un widget del volo impostato su un codice, e il widget dell'area, chiedono ad adsb.lol (e ad adsbdb.com per la rotta) quel codice o le coordinate dell'area salvata, come fa l'app. La tua posizione non viene mai usata dai widget.</dd>
         <dt>Chiave FlyItalyADSB</dt>
         <dd>Se ne aggiungi una, è conservata nel Portachiavi solo su questo dispositivo (non nei backup iCloud), inviata solo a FlyItalyADSB a ogni richiesta e rimovibile in qualsiasi momento in Impostazioni › Fonte dati.</dd>
         <dt>Fotocamera</dt>
@@ -191,6 +195,9 @@
       </dl>
       <p>Dati di aeroporti, piste, frequenze e radioassistenze (OurAirports, pubblico dominio) e il modello magnetico (NOAA WMM2025) sono inclusi nell'app e mai richiesti.</p>
 
+      <h2>Avvisi di decollo e tracce registrate</h2>
+      <p>Perché “Avvisami quando parte” funzioni anche con l'app chiusa, Quota usa un piccolo servizio gestito dallo sviluppatore su Cloudflare Workers. Riceve solo: i codici dei voli che aspetti (con l'aeroporto di partenza), gli indirizzi ICAO degli aerei che segui o hai salvato, la lingua del testo della notifica e un token push di Apple, che permette ad Apple di consegnare la notifica a questo dispositivo e non identifica nient'altro di te. Una volta al minuto chiede ad adsb.lol dove sono quei voli; quando uno decolla invia la notifica tramite Apple e cancella la richiesta. Per gli aerei che segui conserva una posizione al minuto per al massimo 72 ore, così il replay non ha buchi, poi la cancella. Non vengono conservati nomi, email, posizione, contatti né dati d'uso. Se non aspetti voli e non segui aerei, non viene inviato nulla. Per l'infrastruttura vale l'informativa di Cloudflare.</p>
+
       <h2>Etichetta privacy dell'App Store</h2>
       <p>L'etichetta indica <em>Informazioni di contatto – Indirizzo email</em>, usato per il funzionamento dell'app e mai per il tracciamento. Riguarda solo la richiesta facoltativa <em>Ottieni la tua chiave gratuita</em> descritta sopra: l'indirizzo va a FlyItalyADSB e lo sviluppatore non lo riceve mai.</p>
 
@@ -204,6 +211,21 @@
       <p>Le modifiche a questa informativa sono pubblicate in questa pagina con una nuova data. Per domande, usa il <a href="index.html#support">modulo di supporto</a>.</p>
     </section>
   </div>
+
+  <section class="block closing policy-closing">
+    <div class="wrap narrow">
+      <h2>Quota – Flight Radar</h2>
+      <p lang="en">Live air traffic, weather and airports, free on the App Store for iPhone, iPad, Mac and Apple Watch.</p>
+      <p lang="it">Traffico aereo in diretta, meteo e aeroporti, gratis sull'App Store per iPhone, iPad, Mac e Apple Watch.</p>
+      <div class="actions">
+        <a class="store live" data-appstore href="https://apps.apple.com/app/id6832491263">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="now"><span lang="en">Download on the App Store</span><span lang="it">Scarica dall'App Store</span></span>
+        </a>
+        <a class="more" href="index.html"><span lang="en">Discover Quota</span><span lang="it">Scopri Quota</span></a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
